@@ -1,0 +1,1 @@
+Pongo logos genéricos... pásame tamaños/formatos y los hago
