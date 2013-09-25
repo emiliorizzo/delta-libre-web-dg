@@ -102,44 +102,40 @@
 
 	<script src="js/vendor/jquery-1.10.1.min.js" ></script>
 	<script>
+	/* Genero divs para mostrar las classes de colores */
 		 function divsColors($id,$cc,$n){
-		 	
 		 	for($i=1;$i<=$cc;$i++){		 		
 		 		$class = 	$n+$i;
 		 		divColor($id,$class);
-		 	}
+		 		}
 		 }
-	
-	function divColor($id,$class){
-	$('#'+$id).append('<div class="bg-'+$class+'">'+$class+'</div>');
-	}
-	
-	function contColor($cont,$id,$class){
-		$('#'+$cont).append('<div id="'+$id+'" class="'+$class+'"></div>');
-	}
-	
-	function AddColor($col,$blancos,$negros){
-		$ccont = 'fila-'+$col;
-		contColor('colortest',$ccont,'fila');
-		$colb = $col+'-blancos';
-		contColor($ccont,$colb,'colors');
-		$ccol = $col+'-color';
-		contColor($ccont,$ccol,'color');
-		$coln = $col+'-negros';
-		contColor($ccont,$coln,'colors');
+		function divColor($id,$class){
+			$('#'+$id).append('<div class="bg-'+$class+'">'+$class+'</div>');
+		}
 		
-		divsColors($colb,$blancos,$col+'b');
-		divColor($ccol,$col);
-		divsColors($coln,$negros,$col+'n');
-	}
-	
-	AddColor('c1',6,6);
-	AddColor('c2',6,6);
-
-
-		//var x = document.getMatchedCSSRules(); 
+		function contColor($cont,$id,$class){
+			$('#'+$cont).append('<div id="'+$id+'" class="'+$class+'"></div>');
+		}
+		
+		function AddColor($col,$blancos,$negros){
+			$ccont = 'fila-'+$col;
+			contColor('colortest',$ccont,'fila');
+			//Blancos
+			$colb = $col+'-blancos';
+			contColor($ccont,$colb,'colors');
+			$ccol = $col+'-color';
+			contColor($ccont,$ccol,'color');
+			//Negros
+			$coln = $col+'-negros';
+			contColor($ccont,$coln,'colors');
+			divsColors($colb,$blancos,$col+'b');
+			divColor($ccol,$col);
+			divsColors($coln,$negros,$col+'n');
+		}
+		
+		AddColor('c1',6,6); //Color1
+		AddColor('c2',6,6); //Color 2
 	</script>
-
 
     </body>
 </html>
