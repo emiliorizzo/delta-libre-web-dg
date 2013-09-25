@@ -1,0 +1,304 @@
+@import "variables.less"; 
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Single Corner Border Radius
+.border-top-left-radius(@radius) {
+  -webkit-border-top-left-radius: @radius;
+      -moz-border-radius-topleft: @radius;
+          border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius) {
+  -webkit-border-top-right-radius: @radius;
+      -moz-border-radius-topright: @radius;
+          border-top-right-radius: @radius;
+}
+.border-bottom-right-radius(@radius) {
+  -webkit-border-bottom-right-radius: @radius;
+      -moz-border-radius-bottomright: @radius;
+          border-bottom-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius) {
+  -webkit-border-bottom-left-radius: @radius;
+      -moz-border-radius-bottomleft: @radius;
+          border-bottom-left-radius: @radius;
+}
+
+// Single Side Border Radius
+.border-top-radius(@radius) {
+  .border-top-right-radius(@radius);
+  .border-top-left-radius(@radius);
+}
+.border-right-radius(@radius) {
+  .border-top-right-radius(@radius);
+  .border-bottom-right-radius(@radius);
+}
+.border-bottom-radius(@radius) {
+  .border-bottom-right-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+.border-left-radius(@radius) {
+  .border-top-left-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+
+
+
+.rounded-corners (@radius) {
+-webkit-border-radius: @radius;
+-moz-border-radius: @radius;
+-ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+ 
+}
+
+
+.filter(@f,@value){
+-webkit-filter: @f~"(@{value})";
+-moz-filter: @f~"(@{value})";
+-o-filter: @f~"(@{value})";
+-ms-filter: @f~"(@{value})";
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+       -o-box-shadow: @shadow;
+      -ms-box-shadow: @shadow;
+
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+
+.round-frame(){
+margin: 2%;
+padding-top: 3%;
+.rounded-corners(@borderRadiusSmall);
+.box-shadow(@Sh5);  
+}
+
+
+.round-frame2(){
+padding: 1em;
+margin: 2em auto;
+.rounded-corners(@borderRadiusLarge);
+.box-shadow(@shadow);  
+}
+
+
+
+.labelShadow(){
+ .box-shadow( @Sh1 ~"," @Sh5  ~"," @Sh3); 
+}
+
+//preseteos de sombras
+@Sh1: 0px 0px 6px 0px @cneutro;
+@Sh2:0px 0px 6px 0px @black;
+@Sh3:inset 2px 2px 30px 0px  darken(@cneutro,15%);
+@Sh4:0px 0px 1px 0px darken(@cneutro,30%);
+@Sh5:0px 0px 3px 1px @gray;
+@Sh6:inset 2px 2px 30px 0px  darken(@cneutro,10%);
+@Sh7:inset 1px 1px 3px  darken(@gray,15%);
+@Sh8: 1px 1px 3px 0px #666666;
+@Sh9: -1px -1px 3px 0px #666666;
+@Sh10: 1px 1px 3px 0px black;
+@Sh11:inset 2px 2px 30px 0px  darken(@gray,15%);
+@Sh12: 0px 0px 40px rgba(0, 0, 0, 0.4);
+@Sh13: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+@Sh14: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+@Sh15: 4px 4px 8px 0px rgba(0, 0, 0, 0.24); 
+@Sh16: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.20) ;
+@Sh17: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24); 
+@Sh18: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+@Sh19: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+
+// Placeholder text
+// -------------------------
+.placeholder(@color) {
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+}
+
+
+// IE7 inline-block
+// ----------------
+.ie7-inline-block() {
+  *display: inline; /* IE7 inline-block hack */
+  *zoom: 1;
+}
+
+// IE7 likes to collapse whitespace on either side of the inline-block elements.
+// Ems because we're attempting to match the width of a space character. Left
+// version is for form buttons, which typically come after other elements, and
+// right version is for icons, which come before. Applying both is ok, but it will
+// mean that space between those elements will be .6em (~2 space characters) in IE7,
+// instead of the 1 space in other browsers.
+.ie7-restore-left-whitespace() {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+
+.ie7-restore-right-whitespace() {
+  *margin-right: .3em;
+}
+
+
+// Transformations
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+     -moz-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+       -o-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+      -ms-transform: scale(@ratio);
+       -o-transform: scale(@ratio);
+          transform: scale(@ratio);
+}
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+.skew(@x, @y) {
+  -webkit-transform: skew(@x, @y);
+     -moz-transform: skew(@x, @y);
+      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twitter/bootstrap/issues/4885
+       -o-transform: skew(@x, @y);
+          transform: skew(@x, @y);
+  -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
+}
+.translate3d(@x, @y, @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+     -moz-transform: translate3d(@x, @y, @z);
+       -o-transform: translate3d(@x, @y, @z);
+          transform: translate3d(@x, @y, @z);
+}
+
+// Backface visibility
+// Prevent browsers from flickering when using CSS 3D transforms.
+// Default value is `visible`, but can be changed to `hidden
+// See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
+.backface-visibility(@visibility){
+  -webkit-backface-visibility: @visibility;
+     -moz-backface-visibility: @visibility;
+          backface-visibility: @visibility;
+}
+
+// Background clipping
+// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
+.background-clip(@clip) {
+  -webkit-background-clip: @clip;
+     -moz-background-clip: @clip;
+          background-clip: @clip;
+}
+
+// Background sizing
+.background-size(@size) {
+  -webkit-background-size: @size;
+     -moz-background-size: @size;
+       -o-background-size: @size;
+          background-size: @size;
+}
+
+
+// Box sizing
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+// User select
+// For selecting text on the page
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}
+
+// Resize anything
+.resizable(@direction) {
+  resize: @direction; // Options: horizontal, vertical, both
+  overflow: auto; // Safari fix
+}
+
+ 
+.transition(@prop,@tdur,@timfunc,@tdelay){
+-webkit-transition: @prop @tdur @timfunc @tdelay;
+-moz-transition: @prop @tdur @timfunc @tdelay;
+-o-transition: @prop @tdur @timfunc @tdelay;
+transition: @prop @tdur @timfunc @tdelay;
+}
+
+
+.hColor (@index) when (@index > 0) {
+    h@{index} {
+        color: @headColor;
+    }
+    .hColor(@index - 1);
+}
+
+.makeCssColor(@n){
+    .makeCssCol(@@n; @n ); 
+}
+
+.makeCssCol (@index ; @cn ) when (@index > 0) {
+    @col : ~"@{cn}@{index}";
+    &.@{cn}@{index} {
+    color:  @@col;
+    }
+    .makeCssCol(@index - 1  ; @cn);
+}
+
+.makeCssBGColor(@n){
+    .makeCssBGCol(@@n; @n ); 
+}
+
+.makeCssBGCol (@index ; @cn ) when (@index > 0) {
+    @col : ~"@{cn}@{index}";
+    &.bg-@{cn}@{index} {
+    background-color:  @@col;
+    }
+    .makeCssBGCol(@index - 1  ; @cn);
+}
+
+.makeCssOneColorClass(@class){
+    .@{class}{
+    color:@@class;
+    }
+    .bg-@{class}{
+    background-color:@@class;
+    }
+}
+
+
