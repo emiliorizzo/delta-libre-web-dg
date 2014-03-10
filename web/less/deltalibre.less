@@ -9,9 +9,139 @@
 .makeCssColor(c2b);
 .makeCssColor(c2n);
 
+.blanco{
+    color: @white;
+}
+
+.bg-blanco{
+    background-color: @white;
+}
+
+
 /* Background Colors class */
 .makeCssOneColorClass(c2);
 .makeCssBGColor(c1b);
 .makeCssBGColor(c1n);
 .makeCssBGColor(c2b);
 .makeCssBGColor(c2n);
+
+
+/*FORMS*/
+form{
+    padding: 0.5em;
+    .border-radius(1em);
+    
+}
+input{
+     .border-radius(0.7em);
+     height: 2em;
+     border: none;
+}
+input::select{
+    border:none;
+}
+
+
+
+
+/*FORMS - COLORS */
+
+form[class$="c1"]{
+    background-color: @c1b5;
+}
+
+form[class$="c1"] *{
+    color: @c1;
+}
+
+form[class$="c1"] input{
+  background-color: @c1b4;
+  color: @c1;
+}
+
+form[class$="c1"] input:hover{
+  background-color: @c1b3;
+  color: @c1n1;
+}
+
+form[class$="c1"] input[type$="submit"]{
+  background-color: @c1b1;
+  color: @c1b4;
+  font-weight: bold;
+  line-height: 2em;
+  .border-radius(0.5em);
+}
+
+
+form[class$="c1"] input[type$="submit"]:hover{
+  background-color: @c1;
+  color: @c1b3;
+}
+
+
+
+/* Classes*/
+
+.round{
+.border-radius(50%);    
+}
+
+.cajauno{
+  background: @c1b6;
+  padding: 0px 2em 3em;
+  .border-radius(1em);
+}
+.acentro{
+    text-align: center;
+}
+
+.logo-circ-cont{
+padding: 1em; 
+text-align: center;   
+width: 100%;
+}
+
+
+.logo-circ-cont img{
+    .border-radius(50%);
+    background: @white;
+    height: auto;   
+    padding: 2px;
+    border: 4px solid;
+    .box-shadow(@Sh20 ~"," @Sh21); 
+    .rotate(-8deg); 
+}
+
+
+
+/*IDs*/
+#logo-splash{
+       margin-top: -8em;
+       width: 40%;
+       max-width: 12em;
+}
+
+#bienvenida{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 10em;
+    width:100%;
+    max-width: 600px;
+    padding-top: 1em;
+    border: 3px solid @c1;
+ 
+    .box-shadow(@Sh21); 
+     
+ 
+     
+     
+     
+}
+
+#bienvenida-hdr{
+text-align:center;      
+}
+
+#form-splash{
+     .rotate(0deg); 
+}
