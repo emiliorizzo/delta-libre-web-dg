@@ -8,12 +8,12 @@
 //-[ C1 blancos]
 @c1b:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
 
-@c1b1:lighten(@c1,5%);
-@c1b2:lighten(@c1,10%);
-@c1b3:lighten(@c1,15%);
-@c1b4:lighten(@c1,23%);
-@c1b5:lighten(@c1,35%);
-@c1b6:lighten(@c1,45%);
+@c1b1:lighten(@c1,7%);
+@c1b2:lighten((desaturate(@c1,15%)),20%);
+@c1b3:lighten((desaturate(@c1,25%)),35%);
+@c1b4:lighten((desaturate(@c1,30%)),50%);
+@c1b5:lighten((desaturate(@c1,45%)),55%);
+@c1b6:lighten((desaturate(@c1,48%)),62%);
 
 //-[ C1 negros]
 @c1n:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
@@ -71,7 +71,7 @@
 @cfondob1:lighten(@cfondo,2%);
 @bordertopcolor: @c1; //Color de tope boxes destacados
 @destcolor: @c2; // Color de boxes destacados
-@headColor:@c1;
+@headColor:@c1n1;
 @titleColor: @headColor; 
 @navBg:@c2;
 
