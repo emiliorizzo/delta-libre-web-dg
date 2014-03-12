@@ -13,7 +13,7 @@
 @c1b3:lighten((desaturate(@c1,25%)),35%);
 @c1b4:lighten((desaturate(@c1,30%)),50%);
 @c1b5:lighten((desaturate(@c1,45%)),55%);
-@c1b6:lighten((desaturate(@c1,48%)),62%);
+@c1b6:lighten((desaturate(@c1,46%)),64%);
 
 //-[ C1 negros]
 @c1n:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
@@ -61,6 +61,35 @@
 @c4:#c53a10;
 @c4b1:#ca6b4e;
 @c4n1:#67002a;
+
+
+//-[    SOMBRAS    ]-------
+
+@sombras: 21;
+
+//preseteos de sombras
+@Sh1: 0px 0px 6px 0px @cneutro;
+@Sh2:0px 0px 6px 0px @black;
+@Sh3:inset 2px 2px 30px 0px  darken(@cneutro,15%);
+@Sh4:0px 0px 1px 0px darken(@cneutro,30%);
+@Sh5:0px 0px 3px 1px @gray;
+@Sh6:inset 2px 2px 30px 0px  darken(@cneutro,10%);
+@Sh7:inset 1px 1px 3px  darken(@gray,15%);
+@Sh8: 1px 1px 3px 0px #666666;
+@Sh9: -1px -1px 3px 0px #666666;
+@Sh10: 1px 1px 3px 0px black;
+@Sh11:inset 2px 2px 30px 0px  darken(@gray,15%);
+@Sh12: 0px 0px 40px rgba(0, 0, 0, 0.4);
+@Sh13: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+@Sh14: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+@Sh15: 4px 4px 8px 0px rgba(0, 0, 0, 0.24); 
+@Sh16: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.20) ;
+@Sh17: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24); 
+@Sh18: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+@Sh19: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+@Sh20:inset 2px 2px 70px 0px  lighten(@c2,20%);
+@Sh21: 1px 1px 10px 0px @gray;
+
 
 //-----[Vars]-------
 @fondoPagina:#c3c3bf;
@@ -111,8 +140,9 @@
 
 //-------FUENTES
 @sansFontFamily:        'Lato', sans-serif;
-@serifFontFamily:       'Merienda', cursive;
+@serifFontFamily:       'Lato', cursive;
 @monoFontFamily:        'Ubuntu Mono', sans-serif;
+@inputFontFamily:       @sansFontFamily;
 
 @baseFontSize:          16px;
 @baseFontFamily:        'Raleway', sans-serif;

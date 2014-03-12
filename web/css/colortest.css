@@ -1,1 +1,61 @@
-#colortest{width:auto}.ct{width:auto}.fila{display:block;float:left;width:30%;margin:10%}.col{height:50px;line-height:50px;text-align:center;vertical-align:middle;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px;-webkit-box-shadow:1px 1px 3px 0 #666;-moz-box-shadow:1px 1px 3px 0 #666;box-shadow:1px 1px 3px 0 #666;-o-box-shadow:1px 1px 3px 0 #666;-ms-box-shadow:1px 1px 3px 0 #666;margin:10px 0 0 0;font-weight:bold;color:white;text-shadow:0 1px 2px black}.col span{opacity:.6;filter:alpha(opacity=60)}.color div{height:100px;line-height:100px}
+/*
+ @mixin sombrasClass($sombras){
+   @for $j from 1 to (length($sombras)+1){
+     $sombra: nth($sombras,$j);
+     $name:Sh#{$j};
+      .#{$name}{
+        @include box-shadow($sombra); 
+        }
+}
+}*/
+#colortest {
+  width: auto;
+}
+.ct {
+  width: auto;
+}
+.fila {
+  display: block;
+  float: left;
+  width: 30%;
+  margin: 10%;
+}
+.col,
+.som {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  margin: 10px 0 0 0;
+  font-weight: bold;
+  color: white;
+}
+.col {
+  -webkit-box-shadow: 1px 1px 3px 0px #666666;
+  -moz-box-shadow: 1px 1px 3px 0px #666666;
+  box-shadow: 1px 1px 3px 0px #666666;
+  -o-box-shadow: 1px 1px 3px 0px #666666;
+  -ms-box-shadow: 1px 1px 3px 0px #666666;
+  text-shadow: 0px 1px 2px black;
+}
+.col span {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.color div {
+  height: 100px;
+  line-height: 100px;
+}
+.som {
+  margin-top: 20px;
+  color: black;
+  display: inline;
+  float: left;
+  width: 100px;
+  margin: 30px;
+}

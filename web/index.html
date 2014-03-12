@@ -77,10 +77,95 @@
 					</footer>
 						<!--Forms-->
 					<h2>Forms</h2>
-			<form>
-				<label>Text</label>
-				<input type="text" />
-			</form>	
+				
+					
+			<form action="." class="c1" id="testForm">
+				
+				<div class="cajauno">
+						<label for "selectclass" clas="dest">Seleccioná la clase</label>
+					<select name="selectclass" id="selectclass" onchange="SetFormClass(this.id,'testForm');">
+						<option value="c1" selected="selected">c1</option>
+						<option value="c2">c2</option>
+						<option value="nada">ninguna</option>
+					</select>
+				</div>
+				
+				<fieldset>
+				<label for="type-text">Text (text)</label>
+				<input type="text" name="type-text" id="type-text">
+				<br/>
+			
+				<label for="type-search">Search (search)</label>
+				<input type="search" name="type-search" id="type-search">
+				<br/>
+			
+			
+				<label for="type-tel">Telephone (tel)</label>
+				<input type="tel" name="type-tel" id="type-tel">
+				<br/>
+				
+				<label for="type-url">URL (url)</label>
+				<input type="url" name="type-url" id="type-url">
+				<br/>
+				
+				<label for="type-email">E-mail (email)</label>
+				<input type="email" name="type-email" id="type-email">
+				<br/>
+				</fieldset>
+				<label for="type-datetime">Date and Time (datetime)</label>
+				<input type="datetime" name="type-datetime" id="type-datetime">
+				<br/>
+				
+				<label for="type-date">Date (date)</label>
+				<input type="date" name="type-date" id="type-date">
+				<br/>
+				
+				<label for="type-month">Month (month)</label>
+				<input type="month" name="type-month" id="type-month">
+				<br/>
+				
+				<label for="type-week">Week (week)</label>
+				<input type="week" name="type-week" id="type-week">
+				<br/>
+				
+				<label for="type-time">Time (time)</label>
+				<input type="time" name="type-time" id="type-time">
+				<br/>
+				
+				<label for="type-datetime-local">Local Date and Time (datetime-local)</label>
+				<input type="datetime-local" name="type-datetime-local" id="type-datetime-local">
+				<br/>
+				
+				<label for="type-number">Number (number)</label>
+				<input type="number" name="type-number" id="type-number" min="0" max="20" />
+				<br/>
+				
+				<label for="select">Select</label>
+				<select name="select" id="select">
+					<option value="1">opcion 1</option>
+					<option value="2">opcion 2</option>
+					<option value="3">opcion 3</option>
+				</select>
+				<br/>
+					
+				<label for="type-checkbox">Checkbox</label>
+				<input type="checkbox" name="type-checkbox" id="type-checkbox"/>
+				<br/>
+				
+				<label for="type-raddio">Radio</label>
+				<input type="radio" name="type-raddio" id="type-raddio" value="option 1"/> Opcion 1
+				<input type="radio" name="type-raddio" id="type-raddio2" value="option 2" />Opcion 2		
+				<br/>
+				
+				<label for="type-range">Range (range)</label>
+				<input type="range" name="type-range" id="type-range" min="0" max="100" />
+				<br/>
+				
+				<label for="type-color">Colour (color)</label>
+				<input type="color" name="type-color" id="type-color">
+				<br/>					
+				<input type="submit" value="Submit" name="submit-1">
+		</form>
 					
 					
 				</article>
@@ -102,10 +187,13 @@
 						<div class="bg-c1b3"> 
 							Este es un div con class="bg-c1b3" y este un <span class="c2n3">SPAN con class="c2n3"
 						</span> </div>
-						</article>
 						
-				
 						
+				<h2>Sombras</h2>
+						<div id="sombrascont">
+							<div id="sombrastest" > </div>
+						</div>	
+					</article>	
 			</div>
 			<!-- #main -->
 		</div>
@@ -142,6 +230,10 @@
 			function contColor(cont, id, clase) {
 				$('#' + cont).append('<div id="' + id + '" class="' + clase + '"></div>');
 			}
+			
+			function sombra(cont, id, clase) {
+			$('#' + cont).append('<div id="' + id + '" class="' + clase + '"><span>'+id+'</span></div>');
+			}
 
 			function AddColor(col, blancos, negros) {
 				ccont = 'fila-' + col;
@@ -160,11 +252,29 @@
 				divsColors(coln, negros, col + 'n');
 			}
 
+			function SetFormClass(sid,fid){
+				clase = $('#'+ sid + ' option:selected').val();
+				form = $('#'+ fid);
+				form.removeClass();
+				form.addClass(clase);
+			}
+
+			function AddSombras(sombras){
+			//	contColor('sobrascont', 'sombrastest', 'fila');
+				for (i = 1 ; i<=sombras;i++){
+					var n = 'Sh'+i;
+					sombra('sombrastest', n, "som "+n);
+				}
+			}
+
+
+
 			AddColor('c1', -6, 6);
 			//Color1
 			AddColor('c2', -6, 6);
 			//Color 2
-
+				
+			AddSombras(21);
 		</script>
 
 	</body>

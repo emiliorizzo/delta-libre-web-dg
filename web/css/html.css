@@ -1,6 +1,16 @@
 /* ==========================================================================
  HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
  ========================================================================== */
+/*
+ @mixin sombrasClass($sombras){
+   @for $j from 1 to (length($sombras)+1){
+     $sombra: nth($sombras,$j);
+     $name:Sh#{$j};
+      .#{$name}{
+        @include box-shadow($sombra); 
+        }
+}
+}*/
 html,
 button,
 input,
@@ -47,7 +57,7 @@ textarea {
 }
 a,
 a:visited {
-  color: #1ca4a6;
+  color: #1dacaf;
 }
 a:hover {
   color: #e2a753;
@@ -67,22 +77,22 @@ body {
  Theme
  =================== */
 h6 {
-  color: #188e90;
+  color: #14787a;
 }
 h5 {
-  color: #188e90;
+  color: #14787a;
 }
 h4 {
-  color: #188e90;
+  color: #14787a;
 }
 h3 {
-  color: #188e90;
+  color: #14787a;
 }
 h2 {
-  color: #188e90;
+  color: #14787a;
 }
 h1 {
-  color: #188e90;
+  color: #14787a;
 }
 .header-container {
   border-bottom: 10px solid #188e90;
@@ -97,7 +107,7 @@ h1 {
   background: #e2a753;
 }
 .title {
-  color: #188e90;
+  color: #14787a;
 }
 aside {
   -webkit-border-radius: 1em;
@@ -125,7 +135,7 @@ nav a:visited {
   background: #e2a753;
 }
 nav a:hover {
-  color: #1ca4a6;
+  color: #1dacaf;
   background: #e6b269;
 }
 /* ==============
@@ -159,8 +169,8 @@ nav a:hover {
  ========================================================================== */
 @media only screen and (min-width: 480px) {
   /* ====================
-       INTERMEDIATE: Menu
-       ==================== */
+     INTERMEDIATE: Menu
+     ==================== */
   nav a {
     float: left;
     width: 27%;
@@ -175,8 +185,8 @@ nav a:hover {
     margin-right: 0;
   }
   /* ========================
-       INTERMEDIATE: IE Fixes
-       ======================== */
+     INTERMEDIATE: IE Fixes
+     ======================== */
   nav ul li {
     display: inline;
   }
@@ -186,8 +196,8 @@ nav a:hover {
 }
 @media only screen and (min-width: 768px) {
   /* ====================
-       WIDE: CSS3 Effects
-       ==================== */
+     WIDE: CSS3 Effects
+     ==================== */
   .header-container,
   .main aside,
   .footer-container {
@@ -198,8 +208,8 @@ nav a:hover {
     -ms-box-shadow: 0px 0px 6px 0px #000000;
   }
   /* ============
-       WIDE: Menu
-       ============ */
+     WIDE: Menu
+     ============ */
   .title {
     float: left;
   }
@@ -208,8 +218,8 @@ nav a:hover {
     width: 38%;
   }
   /* ============
-       WIDE: Main
-       ============ */
+     WIDE: Main
+     ============ */
   .main article {
     float: left;
     width: 57%;
@@ -221,12 +231,11 @@ nav a:hover {
 }
 @media only screen and (min-width: 1140px) {
   /* ===============
-       Maximal Width
-       =============== */
+     Maximal Width
+     =============== */
   .wrapper {
     width: 1026px;
     /* 1140px - 10% for margins */
-  
     margin: 0 auto;
   }
 }
@@ -290,7 +299,6 @@ nav a:hover {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-  
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -301,8 +309,8 @@ nav a:hover {
     content: " (" attr(title) ")";
   }
   /*
-       * Don't show links for images, or javascript/internal links
-       */
+     * Don't show links for images, or javascript/internal links
+     */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
@@ -316,7 +324,6 @@ nav a:hover {
   thead {
     display: table-header-group;
     /* h5bp.com/t */
-  
   }
   tr,
   img {
@@ -325,7 +332,7 @@ nav a:hover {
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
   p,
@@ -338,4 +345,11 @@ nav a:hover {
   h3 {
     page-break-after: avoid;
   }
+}
+.dest {
+  font-size: 1.1em;
+  color: #14787a;
+}
+.chico {
+  font-size: 0.9em;
 }

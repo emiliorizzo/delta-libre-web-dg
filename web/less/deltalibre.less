@@ -1,5 +1,6 @@
 @import "variables.less"; 
 @import "mixins2.less"; 
+@import "forms.less"; 
 
 
 /* Colors class */
@@ -25,59 +26,32 @@
 .makeCssBGColor(c2b);
 .makeCssBGColor(c2n);
 
+/* Sombras */
+.sombrasClass(@sombras);
+
+
+/*HEADERS FONTS*/
+h1,h2,h3,h4,h5,h6{
+    font-family: @headingsFontFamily;
+}
+
 
 /*FORMS*/
-form{
-    padding: 0.5em;
-    .border-radius(1em);
-    
-}
-input{
-     .border-radius(0.7em);
-     height: 2em;
-     border: none;
-}
-input::select{
-    border:none;
-}
-
+.settForms();
 
 
 
 /*FORMS - COLORS */
 
-form[class$="c1"]{
-    background-color: @c1b5;
+form.c1{
+.settFormsColors("c1");
 }
 
-form[class$="c1"] *{
-    color: @c1;
+form.c2{
+.settFormsColors("c2");
 }
 
-form[class$="c1"] input{
-  background-color: @c1b4;
-  color: @c1;
-}
-
-form[class$="c1"] input:hover{
-  background-color: @c1b3;
-  color: @c1n1;
-}
-
-form[class$="c1"] input[type$="submit"]{
-  background-color: @c1b1;
-  color: @c1b4;
-  font-weight: bold;
-  line-height: 2em;
-  .border-radius(0.5em);
-}
-
-
-form[class$="c1"] input[type$="submit"]:hover{
-  background-color: @c1;
-  color: @c1b3;
-}
-
+            
 
 
 /* Classes*/
@@ -128,8 +102,7 @@ width: 100%;
     width:100%;
     max-width: 600px;
     padding-top: 1em;
-    border: 3px solid @c1;
- 
+    border: 5px solid @c1b1;
     .box-shadow(@Sh21); 
      
  
