@@ -107,17 +107,26 @@ margin: 2em auto;
 
 // Placeholder text
 // -------------------------
-.placeholder(@color) {
+.placeholder(@color,@fs:0.8em,@fst:italic) {
   &:-moz-placeholder {
-    color: @color;
+   .placeHolderProps(@color,@fs,@fst)    
+   
   }
   &:-ms-input-placeholder {
-    color: @color;
+       .placeHolderProps(@color,@fs,@fst)
   }
   &::-webkit-input-placeholder {
-    color: @color;
+       .placeHolderProps(@color,@fs,@fst)
   }
 }
+
+    .placeHolderProps(@color,@fs,@fst){
+        color:@color;
+        font-size:@fs;
+        font-style:@fst;
+        padding-left: 1em;
+    }
+
 
 
 // IE7 inline-block
@@ -227,6 +236,12 @@ margin: 2em auto;
           user-select: @select;
 }
 
+.selection(@color,@bgcolor){
+    ::selection {color:@color;background:@bgcolor;}
+    ::-moz-selection {color:@color;background:@bgcolor;}
+}
+
+
 // Resize anything
 .resizable(@direction) {
   resize: @direction; // Options: horizontal, vertical, both
@@ -290,13 +305,53 @@ transition: @prop @tdur @timfunc @tdelay;
 .sombrasClass(@sombras - 1);
 }
 
-/*
- @mixin sombrasClass($sombras){
-   @for $j from 1 to (length($sombras)+1){
-     $sombra: nth($sombras,$j);
-     $name:Sh#{$j};
-      .#{$name}{
-        @include box-shadow($sombra); 
-        }
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: -o-linear-gradient(@stop,
+                                 @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
 }
-}*/
+
+
+
+/*.colorCalc(@color,@pos,@Smax:0,@pasos: 9,@Bmax: 0){
+
+& when (@Bmax = 0){
+    @Bmax: lightness(@color);}    
+  
+  
+    @perc: colPerc(@Bmax,@pasos,@pos);
+    @col: lighten(@color,@perc);
+   & when  (@pos < 0) {@col: darken(@color,@perc);}
+    
+     & when (@Smax > 0) {
+      @perc: colPerc(@Smax,@pasos,@pos);
+      @col: desaturate(@col,@perc);
+    } 
+
+}
+
+.colPerc(@max,@pasos,@pos){
+  @int: @max/@pasos;
+  @pos: abs(@pos);
+  @pos: @pos+1;
+  @perc: @int*@pos;
+
+}
+
+.BM(@Bmax) when (@Bmax = 0){
+    @Bmax: lightness(@color); 
+}
+*/
+

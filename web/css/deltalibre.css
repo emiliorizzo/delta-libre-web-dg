@@ -1,13 +1,38 @@
-/*
- @mixin sombrasClass($sombras){
-   @for $j from 1 to (length($sombras)+1){
-     $sombra: nth($sombras,$j);
-     $name:Sh#{$j};
-      .#{$name}{
-        @include box-shadow($sombra); 
-        }
+/*@c2b1:lighten(@c2,5%);
+@c2b2:lighten(@c2,10%);
+@c2b3:lighten(@c2,15%);
+@c2b4:lighten(@c2,18%);
+@c2b5:lighten(@c2,22%);
+@c2b6:lighten(@c2,25%);*/
+/*.colorCalc(@color,@pos,@Smax:0,@pasos: 9,@Bmax: 0){
+
+& when (@Bmax = 0){
+    @Bmax: lightness(@color);}    
+  
+  
+    @perc: colPerc(@Bmax,@pasos,@pos);
+    @col: lighten(@color,@perc);
+   & when  (@pos < 0) {@col: darken(@color,@perc);}
+    
+     & when (@Smax > 0) {
+      @perc: colPerc(@Smax,@pasos,@pos);
+      @col: desaturate(@col,@perc);
+    } 
+
 }
-}*/
+
+.colPerc(@max,@pasos,@pos){
+  @int: @max/@pasos;
+  @pos: abs(@pos);
+  @pos: @pos+1;
+  @perc: @int*@pos;
+
+}
+
+.BM(@Bmax) when (@Bmax = 0){
+    @Bmax: lightness(@color); 
+}
+*/
 /* Colors class */
 .c1 {
   color: #188e90;
@@ -19,19 +44,19 @@
   color: #f5f9f9;
 }
 .c1b5 {
-  color: #d8e8e8;
+  color: #e2eeee;
 }
 .c1b4 {
   color: #c1e5e6;
 }
 .c1b3 {
-  color: #87d2d3;
+  color: #9ad9da;
 }
 .c1b2 {
   color: #43c8cb;
 }
 .c1b1 {
-  color: #1dacaf;
+  color: #2aafb1;
 }
 .c1n6 {
   color: #093839;
@@ -52,40 +77,40 @@
   color: #14787a;
 }
 .c2b6 {
-  color: #f4dfc0;
+  color: #f8eee0;
 }
 .c2b5 {
-  color: #f2d8b3;
+  color: #f0daba;
 }
 .c2b4 {
-  color: #efcfa2;
+  color: #eac897;
 }
 .c2b3 {
-  color: #edc894;
+  color: #e6b773;
 }
 .c2b2 {
-  color: #e9bd7f;
+  color: #e4ac5b;
 }
 .c2b1 {
-  color: #e6b269;
+  color: #df9c3d;
 }
 .c2n6 {
-  color: #704913;
+  color: #442d0b;
 }
 .c2n5 {
-  color: #855817;
+  color: #5a3b0f;
 }
 .c2n4 {
-  color: #9b661a;
+  color: #704a13;
 }
 .c2n3 {
-  color: #b1741e;
+  color: #865816;
 }
 .c2n2 {
-  color: #c78322;
+  color: #9c661a;
 }
 .c2n1 {
-  color: #db9127;
+  color: #b1751e;
 }
 .blanco {
   color: #ffffff;
@@ -93,30 +118,42 @@
 .bg-blanco {
   background-color: #ffffff;
 }
+.negro {
+  color: #000000;
+}
+.bg-negro {
+  background-color: #000000;
+}
+.gris {
+  color: #808080;
+}
+.bg-gris {
+  background-color: #808080;
+}
 /* Background Colors class */
 .c2 {
-  color: #e2a753;
+  color: #db9127;
 }
 .bg-c2 {
-  background-color: #e2a753;
+  background-color: #db9127;
 }
 .bg-c1b6 {
   background-color: #f5f9f9;
 }
 .bg-c1b5 {
-  background-color: #d8e8e8;
+  background-color: #e2eeee;
 }
 .bg-c1b4 {
   background-color: #c1e5e6;
 }
 .bg-c1b3 {
-  background-color: #87d2d3;
+  background-color: #9ad9da;
 }
 .bg-c1b2 {
   background-color: #43c8cb;
 }
 .bg-c1b1 {
-  background-color: #1dacaf;
+  background-color: #2aafb1;
 }
 .bg-c1n6 {
   background-color: #093839;
@@ -137,42 +174,49 @@
   background-color: #14787a;
 }
 .bg-c2b6 {
-  background-color: #f4dfc0;
+  background-color: #f8eee0;
 }
 .bg-c2b5 {
-  background-color: #f2d8b3;
+  background-color: #f0daba;
 }
 .bg-c2b4 {
-  background-color: #efcfa2;
+  background-color: #eac897;
 }
 .bg-c2b3 {
-  background-color: #edc894;
+  background-color: #e6b773;
 }
 .bg-c2b2 {
-  background-color: #e9bd7f;
+  background-color: #e4ac5b;
 }
 .bg-c2b1 {
-  background-color: #e6b269;
+  background-color: #df9c3d;
 }
 .bg-c2n6 {
-  background-color: #704913;
+  background-color: #442d0b;
 }
 .bg-c2n5 {
-  background-color: #855817;
+  background-color: #5a3b0f;
 }
 .bg-c2n4 {
-  background-color: #9b661a;
+  background-color: #704a13;
 }
 .bg-c2n3 {
-  background-color: #b1741e;
+  background-color: #865816;
 }
 .bg-c2n2 {
-  background-color: #c78322;
+  background-color: #9c661a;
 }
 .bg-c2n1 {
-  background-color: #db9127;
+  background-color: #b1751e;
 }
 /* Sombras */
+.Sh22 {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
 .Sh21 {
   -webkit-box-shadow: 1px 1px 10px 0px #808080;
   -moz-box-shadow: 1px 1px 10px 0px #808080;
@@ -181,11 +225,11 @@
   -ms-box-shadow: 1px 1px 10px 0px #808080;
 }
 .Sh20 {
-  -webkit-box-shadow: inset 2px 2px 70px 0px #f1d4aa;
-  -moz-box-shadow: inset 2px 2px 70px 0px #f1d4aa;
-  box-shadow: inset 2px 2px 70px 0px #f1d4aa;
-  -o-box-shadow: inset 2px 2px 70px 0px #f1d4aa;
-  -ms-box-shadow: inset 2px 2px 70px 0px #f1d4aa;
+  -webkit-box-shadow: inset 2px 2px 70px 0px #eabe7e;
+  -moz-box-shadow: inset 2px 2px 70px 0px #eabe7e;
+  box-shadow: inset 2px 2px 70px 0px #eabe7e;
+  -o-box-shadow: inset 2px 2px 70px 0px #eabe7e;
+  -ms-box-shadow: inset 2px 2px 70px 0px #eabe7e;
 }
 .Sh19 {
   -webkit-box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
@@ -329,81 +373,374 @@ h5,
 h6 {
   font-family: 'Lato', sans-serif;
 }
+/*SELECTION*/
+body ::selection {
+  color: #188e90;
+  background: #e2eeee;
+}
+body ::-moz-selection {
+  color: #188e90;
+  background: #e2eeee;
+}
 /*FORMS*/
-form {
-  padding: 0.5em;
+form,
+fieldset {
+  padding: 1em;
   -webkit-border-radius: 1em;
   -moz-border-radius: 1em;
   border-radius: 1em;
 }
-input {
-  -webkit-border-radius: 0.7em;
-  -moz-border-radius: 0.7em;
-  border-radius: 0.7em;
+input,
+select,
+textarea,
+button {
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  border-radius: 0.4em;
   height: 2em;
-  border: none;
+  border: solid 1px;
+  margin: 0.5em;
+  font-family: 'Lato', sans-serif;
+}
+input[type$="submit"],
+button {
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  font-weight: bold;
+}
+input[type$="radio"] {
+  color: red;
 }
 input::select {
   border: none;
 }
-/*FORMS - COLORS */
-form.c1 {
-  /*@bgcol:"@{cbname}b5";
-      background-color: @@bgcol;*/
-  background-color: #d8e8e8;
+input:focus,
+input:active {
+  border-style: none;
 }
-form.c1 * {
-  color: #188e90;
+textarea {
+  min-width: 15em;
+  min-height: 3em;
 }
-form.c1 input {
-  background-color: #c1e5e6;
+label {
   font-family: 'Lato', sans-serif;
+  font-size: 0.95em;
 }
-form.c1 input:hover {
-  background-color: #87d2d3;
+fieldset {
+  margin-bottom: 1em;
+  border: dashed 1px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  font-weight: bold;
+  outline: none;
+  border: 1px solid;
+}
+input:invalid {
+  text-decoration: line-through;
+}
+form ul li {
+  list-style: none;
+}
+legend {
+  font-family: 'Lato', sans-serif;
+  margin-left: 2em;
+  font-weight: bold;
+}
+legend:before {
+  content: "[ ";
+}
+legend:after {
+  content: " ]";
+}
+:-moz-placeholder {
+  color: #808080;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+:-ms-input-placeholder {
+  color: #808080;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+::-webkit-input-placeholder {
+  color: #808080;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+/*FORMS - COLORS */
+form.c1,
+fieldset.c1,
+form.c2 *.inv {
+  /*
+ @cbname: prefijo de color
+ * */
+  background-color: #f5f9f9;
+}
+form.c1 *,
+fieldset.c1 *,
+form.c2 *.inv * {
   color: #14787a;
 }
-form.c1 input[type$="submit"] {
-  background-color: #1dacaf;
-  color: #c1e5e6;
-  font-weight: bold;
-  line-height: 2em;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
+form.c1 input,
+fieldset.c1 input,
+form.c2 *.inv input,
+form.c1 select,
+fieldset.c1 select,
+form.c2 *.inv select,
+form.c1 textarea,
+fieldset.c1 textarea,
+form.c2 *.inv textarea {
+  background-color: #c1e5e6;
+  border-color: #9ad9da;
 }
-form.c1 input[type$="submit"]:hover {
+form.c1 input:hover,
+fieldset.c1 input:hover,
+form.c2 *.inv input:hover {
+  background-color: #9ad9da;
+  color: #14787a;
+}
+form.c1 input:focus,
+fieldset.c1 input:focus,
+form.c2 *.inv input:focus,
+form.c1 select:focus,
+fieldset.c1 select:focus,
+form.c2 *.inv select:focus,
+form.c1 textarea:focus,
+fieldset.c1 textarea:focus,
+form.c2 *.inv textarea:focus {
+  color: #126c6d;
+  background-color: #9ad9da;
+  border: 1px solid #14787a;
+}
+form.c1 input[type$="submit"],
+fieldset.c1 input[type$="submit"],
+form.c2 *.inv input[type$="submit"],
+form.c1 button,
+fieldset.c1 button,
+form.c2 *.inv button {
+  color: #e2eeee;
   background-color: #188e90;
-  color: #87d2d3;
+  vertical-align: middle;
+  height: 2.5em;
+  line-height: 1em;
+  padding: 0.3em 2em 0.3em 2em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
+  border: #168183 1px solid;
+  background: #188e90;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #188e90), color-stop(1, #1fb9bc));
+  background: -ms-linear-gradient(bottom, #188e90, #1fb9bc);
+  background: -moz-linear-gradient(center bottom, #188e90 0%, #1fb9bc 100%);
+  background: -o-linear-gradient(#1fb9bc, #188e90);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1fb9bc', endColorstr='#188e90', GradientType=0);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
-form.c2 {
-  /*@bgcol:"@{cbname}b5";
-      background-color: @@bgcol;*/
-  background-color: #f2d8b3;
+form.c1 input[type$="submit"]:hover,
+fieldset.c1 input[type$="submit"]:hover,
+form.c2 *.inv input[type$="submit"]:hover,
+form.c1 button:hover,
+fieldset.c1 button:hover,
+form.c2 *.inv button:hover {
+  color: #f2f7f7;
+  background-color: #14787a;
+  background: #14787a;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #14787a), color-stop(1, #1ca4a6));
+  background: -ms-linear-gradient(bottom, #14787a, #1ca4a6);
+  background: -moz-linear-gradient(center bottom, #14787a 0%, #1ca4a6 100%);
+  background: -o-linear-gradient(#1ca4a6, #14787a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1ca4a6', endColorstr='#14787a', GradientType=0);
 }
-form.c2 * {
-  color: #e2a753;
+form.c1 fieldset,
+fieldset.c1 fieldset,
+form.c2 *.inv fieldset {
+  border-color: #9ad9da;
 }
-form.c2 input {
-  background-color: #efcfa2;
-  font-family: 'Lato', sans-serif;
+form.c1 fieldset.dest,
+fieldset.c1 fieldset.dest,
+form.c2 *.inv fieldset.dest {
+  background-color: #f5f9f9;
 }
-form.c2 input:hover {
-  background-color: #87d2d3;
+form.c1:-moz-placeholder,
+fieldset.c1:-moz-placeholder,
+form.c2 *.inv:-moz-placeholder {
+  color: #f5f9f9;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+form.c1:-ms-input-placeholder,
+fieldset.c1:-ms-input-placeholder,
+form.c2 *.inv:-ms-input-placeholder {
+  color: #f5f9f9;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+form.c1::-webkit-input-placeholder,
+fieldset.c1::-webkit-input-placeholder,
+form.c2 *.inv::-webkit-input-placeholder {
+  color: #f5f9f9;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+form.c1 ::selection,
+fieldset.c1 ::selection,
+form.c2 *.inv ::selection {
+  color: #188e90;
+  background: #e2eeee;
+}
+form.c1 ::-moz-selection,
+fieldset.c1 ::-moz-selection,
+form.c2 *.inv ::-moz-selection {
+  color: #188e90;
+  background: #e2eeee;
+}
+form.c2,
+fieldset.c2,
+form.c1 *.inv {
+  /*
+ @cbname: prefijo de color
+ * */
+  background-color: #f8eee0;
+}
+form.c2 *,
+fieldset.c2 *,
+form.c1 *.inv * {
+  color: #b1751e;
+}
+form.c2 input,
+fieldset.c2 input,
+form.c1 *.inv input,
+form.c2 select,
+fieldset.c2 select,
+form.c1 *.inv select,
+form.c2 textarea,
+fieldset.c2 textarea,
+form.c1 *.inv textarea {
+  background-color: #eac897;
+  border-color: #e6b773;
+}
+form.c2 input:hover,
+fieldset.c2 input:hover,
+form.c1 *.inv input:hover {
+  background-color: #e6b773;
+  color: #b1751e;
+}
+form.c2 input:focus,
+fieldset.c2 input:focus,
+form.c1 *.inv input:focus,
+form.c2 select:focus,
+fieldset.c2 select:focus,
+form.c1 *.inv select:focus,
+form.c2 textarea:focus,
+fieldset.c2 textarea:focus,
+form.c1 *.inv textarea:focus {
+  color: #9c661a;
+  background-color: #e6b773;
+  border: 1px solid #b1751e;
+}
+form.c2 input[type$="submit"],
+fieldset.c2 input[type$="submit"],
+form.c1 *.inv input[type$="submit"],
+form.c2 button,
+fieldset.c2 button,
+form.c1 *.inv button {
+  color: #f0daba;
+  background-color: #db9127;
+  vertical-align: middle;
+  height: 2.5em;
+  line-height: 1em;
+  padding: 0.3em 2em 0.3em 2em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
+  border: #d08923 1px solid;
+  background: #db9127;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #db9127), color-stop(1, #e2a753));
+  background: -ms-linear-gradient(bottom, #db9127, #e2a753);
+  background: -moz-linear-gradient(center bottom, #db9127 0%, #e2a753 100%);
+  background: -o-linear-gradient(#e2a753, #db9127);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2a753', endColorstr='#db9127', GradientType=0);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+form.c2 input[type$="submit"]:hover,
+fieldset.c2 input[type$="submit"]:hover,
+form.c1 *.inv input[type$="submit"]:hover,
+form.c2 button:hover,
+fieldset.c2 button:hover,
+form.c1 *.inv button:hover {
+  color: #f5e5cf;
+  background-color: #c78321;
+  background: #c78321;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #c78321), color-stop(1, #df9c3d));
+  background: -ms-linear-gradient(bottom, #c78321, #df9c3d);
+  background: -moz-linear-gradient(center bottom, #c78321 0%, #df9c3d 100%);
+  background: -o-linear-gradient(#df9c3d, #c78321);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#df9c3d', endColorstr='#c78321', GradientType=0);
+}
+form.c2 fieldset,
+fieldset.c2 fieldset,
+form.c1 *.inv fieldset {
+  border-color: #e6b773;
+}
+form.c2 fieldset.dest,
+fieldset.c2 fieldset.dest,
+form.c1 *.inv fieldset.dest {
+  background-color: #f8eee0;
+}
+form.c2:-moz-placeholder,
+fieldset.c2:-moz-placeholder,
+form.c1 *.inv:-moz-placeholder {
+  color: #f8eee0;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+form.c2:-ms-input-placeholder,
+fieldset.c2:-ms-input-placeholder,
+form.c1 *.inv:-ms-input-placeholder {
+  color: #f8eee0;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+form.c2::-webkit-input-placeholder,
+fieldset.c2::-webkit-input-placeholder,
+form.c1 *.inv::-webkit-input-placeholder {
+  color: #f8eee0;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-left: 1em;
+}
+form.c2 ::selection,
+fieldset.c2 ::selection,
+form.c1 *.inv ::selection {
   color: #db9127;
+  background: #f0daba;
 }
-form.c2 input[type$="submit"] {
-  background-color: #e6b269;
-  color: #efcfa2;
-  font-weight: bold;
-  line-height: 2em;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-}
-form.c2 input[type$="submit"]:hover {
-  background-color: #188e90;
-  color: #87d2d3;
+form.c2 ::-moz-selection,
+fieldset.c2 ::-moz-selection,
+form.c1 *.inv ::-moz-selection {
+  color: #db9127;
+  background: #f0daba;
 }
 /* Classes*/
 .round {
@@ -434,11 +771,11 @@ form.c2 input[type$="submit"]:hover {
   height: auto;
   padding: 2px;
   border: 4px solid;
-  -webkit-box-shadow: inset 2px 2px 70px 0px #f1d4aa , 1px 1px 10px 0px #808080;
-  -moz-box-shadow: inset 2px 2px 70px 0px #f1d4aa , 1px 1px 10px 0px #808080;
-  box-shadow: inset 2px 2px 70px 0px #f1d4aa , 1px 1px 10px 0px #808080;
-  -o-box-shadow: inset 2px 2px 70px 0px #f1d4aa , 1px 1px 10px 0px #808080;
-  -ms-box-shadow: inset 2px 2px 70px 0px #f1d4aa , 1px 1px 10px 0px #808080;
+  -webkit-box-shadow: inset 2px 2px 70px 0px #eabe7e , 1px 1px 10px 0px #808080;
+  -moz-box-shadow: inset 2px 2px 70px 0px #eabe7e , 1px 1px 10px 0px #808080;
+  box-shadow: inset 2px 2px 70px 0px #eabe7e , 1px 1px 10px 0px #808080;
+  -o-box-shadow: inset 2px 2px 70px 0px #eabe7e , 1px 1px 10px 0px #808080;
+  -ms-box-shadow: inset 2px 2px 70px 0px #eabe7e , 1px 1px 10px 0px #808080;
   -webkit-transform: rotate(-8deg);
   -moz-transform: rotate(-8deg);
   -ms-transform: rotate(-8deg);
@@ -458,7 +795,7 @@ form.c2 input[type$="submit"]:hover {
   width: 100%;
   max-width: 600px;
   padding-top: 1em;
-  border: 5px solid #1dacaf;
+  border: 5px solid #2aafb1;
   -webkit-box-shadow: 1px 1px 10px 0px #808080;
   -moz-box-shadow: 1px 1px 10px 0px #808080;
   box-shadow: 1px 1px 10px 0px #808080;

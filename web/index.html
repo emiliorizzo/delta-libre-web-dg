@@ -90,9 +90,10 @@
 					</select>
 				</div>
 				
-				<fieldset>
-				<label for="type-text">Text (text)</label>
-				<input type="text" name="type-text" id="type-text">
+				<fieldset class="inv">
+					<legend>Un Fieldset con class="inv"</legend>
+				<label for="type-text" >Text (text)</label>
+				<input type="text" name="type-text" id="type-text" >
 				<br/>
 			
 				<label for="type-search">Search (search)</label>
@@ -109,7 +110,7 @@
 				<br/>
 				
 				<label for="type-email">E-mail (email)</label>
-				<input type="email" name="type-email" id="type-email">
+				<input type="email" name="type-email" id="type-email"  placeholder="miemail@midominio.com"/>
 				<br/>
 				</fieldset>
 				<label for="type-datetime">Date and Time (datetime)</label>
@@ -153,8 +154,8 @@
 				<br/>
 				
 				<label for="type-raddio">Radio</label>
-				<input type="radio" name="type-raddio" id="type-raddio" value="option 1"/> Opcion 1
-				<input type="radio" name="type-raddio" id="type-raddio2" value="option 2" />Opcion 2		
+				<input type="radio" name="type-radio" id="type-radio" value="option 1"/> <label for="type-radio">Opcion 1</label>
+				<input type="radio" name="type-radio" id="type-radio2" value="option 2" /><label for="type-radio2">Opcion 2</label>	
 				<br/>
 				
 				<label for="type-range">Range (range)</label>
@@ -163,15 +164,17 @@
 				
 				<label for="type-color">Colour (color)</label>
 				<input type="color" name="type-color" id="type-color">
+				<br/>
+				<label for="textarea">Textarea</label>
+				<textarea name="textarea" id="textarea">
+					
+				</textarea>
 				<br/>					
-				<input type="submit" value="Submit" name="submit-1">
+				<h3>Botones</h3>
+					<input type="submit" value="Submit" name="submit-1"/>
+					<button type="button"  name="submit-2" >Button</button>
 		</form>
-					
-					
 				</article>
-				
-			
-				
 				
 				<aside>
 					<h3>aside</h3>
@@ -187,13 +190,19 @@
 						<div class="bg-c1b3"> 
 							Este es un div con class="bg-c1b3" y este un <span class="c2n3">SPAN con class="c2n3"
 						</span> </div>
-						
-						
+							
 				<h2>Sombras</h2>
 						<div id="sombrascont">
 							<div id="sombrastest" > </div>
 						</div>	
+						
+							
+		
+						
 					</article>	
+			
+		
+			
 			</div>
 			<!-- #main -->
 		</div>
@@ -274,7 +283,7 @@
 			AddColor('c2', -6, 6);
 			//Color 2
 				
-			AddSombras(21);
+			AddSombras(22	);
 		</script>
 
 	</body>

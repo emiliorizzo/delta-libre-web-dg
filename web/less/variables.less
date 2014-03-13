@@ -8,11 +8,11 @@
 //-[ C1 blancos]
 @c1b:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
 
-@c1b1:lighten(@c1,7%);
+@c1b1:lighten((desaturate(@c1,10%)),10%);
 @c1b2:lighten((desaturate(@c1,15%)),20%);
-@c1b3:lighten((desaturate(@c1,25%)),35%);
+@c1b3:lighten((desaturate(@c1,25%)),40%);
 @c1b4:lighten((desaturate(@c1,30%)),50%);
-@c1b5:lighten((desaturate(@c1,45%)),55%);
+@c1b5:lighten((desaturate(@c1,45%)),58%);
 @c1b6:lighten((desaturate(@c1,46%)),64%);
 
 //-[ C1 negros]
@@ -25,17 +25,24 @@
 @c1n6:darken(@c1,20%);
 
 //-[    C2    ]-------
-@c2:#e2a753;
+@c2:#db9127;
 
 //-[ C2 blancos]
 @c2b:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
 
-@c2b1:lighten(@c2,5%);
+/*@c2b1:lighten(@c2,5%);
 @c2b2:lighten(@c2,10%);
 @c2b3:lighten(@c2,15%);
 @c2b4:lighten(@c2,18%);
 @c2b5:lighten(@c2,22%);
-@c2b6:lighten(@c2,25%);
+@c2b6:lighten(@c2,25%);*/
+
+@c2b1:lighten((desaturate(@c2,0%)),5%);
+@c2b2:lighten((desaturate(@c2,0%)),12%);
+@c2b3:lighten((desaturate(@c2,2%)),17%);
+@c2b4:lighten((desaturate(@c2,5%)),25%);
+@c2b5:lighten((desaturate(@c2,7%)),33%);
+@c2b6:lighten((desaturate(@c2,10%)),42%);
 
 //-[ C2 negros]
 @c2n:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
@@ -65,7 +72,7 @@
 
 //-[    SOMBRAS    ]-------
 
-@sombras: 21;
+@sombras: 22;
 
 //preseteos de sombras
 @Sh1: 0px 0px 6px 0px @cneutro;
@@ -89,20 +96,22 @@
 @Sh19: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
 @Sh20:inset 2px 2px 70px 0px  lighten(@c2,20%);
 @Sh21: 1px 1px 10px 0px @gray;
+@Sh22:  0 1px 2px rgba(0,0,0,.2);
+
 
 
 //-----[Vars]-------
 @fondoPagina:#c3c3bf;
 @cneutro:#e7f0ee;
-@footBg: @c2;
+@footBg: @c2b1;
 @cfondo: @gray;
 @selcolor: @gray;
 @cfondob1:lighten(@cfondo,2%);
 @bordertopcolor: @c1; //Color de tope boxes destacados
-@destcolor: @c2; // Color de boxes destacados
-@headColor:@c1n1;
+@destcolor: @c2b2; // Color de boxes destacados
+@headColor:@c1;
 @titleColor: @headColor; 
-@navBg:@c2;
+@navBg:@c2b2;
 
 
 @oscuro: #52371a;

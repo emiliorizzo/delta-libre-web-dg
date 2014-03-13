@@ -1,16 +1,41 @@
 /* ==========================================================================
  HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
  ========================================================================== */
-/*
- @mixin sombrasClass($sombras){
-   @for $j from 1 to (length($sombras)+1){
-     $sombra: nth($sombras,$j);
-     $name:Sh#{$j};
-      .#{$name}{
-        @include box-shadow($sombra); 
-        }
+/*@c2b1:lighten(@c2,5%);
+@c2b2:lighten(@c2,10%);
+@c2b3:lighten(@c2,15%);
+@c2b4:lighten(@c2,18%);
+@c2b5:lighten(@c2,22%);
+@c2b6:lighten(@c2,25%);*/
+/*.colorCalc(@color,@pos,@Smax:0,@pasos: 9,@Bmax: 0){
+
+& when (@Bmax = 0){
+    @Bmax: lightness(@color);}    
+  
+  
+    @perc: colPerc(@Bmax,@pasos,@pos);
+    @col: lighten(@color,@perc);
+   & when  (@pos < 0) {@col: darken(@color,@perc);}
+    
+     & when (@Smax > 0) {
+      @perc: colPerc(@Smax,@pasos,@pos);
+      @col: desaturate(@col,@perc);
+    } 
+
 }
-}*/
+
+.colPerc(@max,@pasos,@pos){
+  @int: @max/@pasos;
+  @pos: abs(@pos);
+  @pos: @pos+1;
+  @perc: @int*@pos;
+
+}
+
+.BM(@Bmax) when (@Bmax = 0){
+    @Bmax: lightness(@color); 
+}
+*/
 html,
 button,
 input,
@@ -34,7 +59,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #e2a753;
+  border-top: 1px solid #db9127;
   margin: 1em 0;
   padding: 0;
 }
@@ -57,10 +82,10 @@ textarea {
 }
 a,
 a:visited {
-  color: #1dacaf;
+  color: #2aafb1;
 }
 a:hover {
-  color: #e2a753;
+  color: #db9127;
 }
 /* ===== Initializr Styles ==================================================
  Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
@@ -77,22 +102,22 @@ body {
  Theme
  =================== */
 h6 {
-  color: #14787a;
+  color: #188e90;
 }
 h5 {
-  color: #14787a;
+  color: #188e90;
 }
 h4 {
-  color: #14787a;
+  color: #188e90;
 }
 h3 {
-  color: #14787a;
+  color: #188e90;
 }
 h2 {
-  color: #14787a;
+  color: #188e90;
 }
 h1 {
-  color: #14787a;
+  color: #188e90;
 }
 .header-container {
   border-bottom: 10px solid #188e90;
@@ -104,10 +129,10 @@ h1 {
 .header-container,
 .footer-container,
 .main aside {
-  background: #e2a753;
+  background: #e4ac5b;
 }
 .title {
-  color: #14787a;
+  color: #188e90;
 }
 aside {
   -webkit-border-radius: 1em;
@@ -132,11 +157,11 @@ nav a:visited {
   text-decoration: none;
   font-weight: bold;
   color: #188e90;
-  background: #e2a753;
+  background: #e4ac5b;
 }
 nav a:hover {
-  color: #1dacaf;
-  background: #e6b269;
+  color: #2aafb1;
+  background: #e7b771;
 }
 /* ==============
  MOBILE: Main
@@ -148,11 +173,11 @@ nav a:hover {
   font-size: 2em;
 }
 .main aside {
-  color: #f2d8b3;
+  color: #f0daba;
   padding: 0px 5% 10px;
 }
 .footer-container footer {
-  color: #f2d8b3;
+  color: #f0daba;
   padding: 20px 0;
 }
 /* ===============
@@ -348,7 +373,7 @@ nav a:hover {
 }
 .dest {
   font-size: 1.1em;
-  color: #14787a;
+  color: #188e90;
 }
 .chico {
   font-size: 0.9em;

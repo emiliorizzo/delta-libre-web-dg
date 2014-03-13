@@ -1,51 +1,151 @@
 @import "variables.less"; 
+@import "mixins2.less"; 
 
 .settForms(){
-form{
-    padding: 0.5em;
+form, fieldset{
+    padding: 1em;
     .border-radius(1em);
     
 }
-input{
-     .border-radius(0.7em);
+input,select,textarea, button{
+     .border-radius(0.4em);
      height: 2em;
-     border: none;
+     border: solid 1px;
+     margin: 0.5em;   
+     font-family: @inputFontFamily;  
+}
+
+input[type$="submit"],button{
+    .border-radius(0.5em);
+    font-weight: bold;          
+}
+
+
+input[type$="radio"]{
+color:red;
 }
 
 input::select{
     border:none;
 }
+
+input:focus, input:active{
+border-style: none;         
+}
+ 
+textarea{
+    min-width: 15em;
+    min-height: 3em;
+} 
+ 
+label{
+      font-family: @inputFontFamily;
+      font-size: 0.95em;
+}
+ 
+fieldset{
+    margin-bottom: 1em;
+    border: dashed 1px;
+}      
+
+input:focus, select:focus, textarea:focus{
+     font-weight: bold;
+     outline: none;
+     border: 1px solid;
 }
 
+& input:invalid{
+text-decoration: line-through;          
+}
+
+form ul li{
+    list-style: none;
+}     
+ 
+legend{
+    font-family: @inputFontFamily;
+    margin-left: 2em;   
+    font-weight: bold;
+}      
+
+legend:before{
+    content: "[ ";
+}
+
+legend:after{
+    content: " ]";
+}    
+ 
+  .placeholder(@gray,0.8em,italic);    
+}
 
 
 .settFormsColors(@cbname){
-      /*@bgcol:"@{cbname}b5";
-      background-color: @@bgcol;*/
-      background-color: ~"@{@{cbname}b5}";
+/*
+ @cbname: prefijo de color
+ * */
+      @fbackColor: ~"@{@{cbname}b6}";
+      background-color: @fbackColor;
       & *{
-          color: @@cbname;
+          color: ~"@{@{cbname}n1}";
       }
-      &  input{
+      &  input,select, textarea{
             background-color: ~"@{@{cbname}b4}";
-            font-family: @inputFontFamily;
+            border-color: ~"@{@{cbname}b3}";
       } 
     
       & input:hover{
-        background-color: @c1b3;
+        background-color:  ~"@{@{cbname}b3}";
         color: ~"@{@{cbname}n1}";
       }
-      & input[type$="submit"]{
-      background-color: ~"@{@{cbname}b1}";
-      color:  ~"@{@{cbname}b4}";    
-      font-weight: bold;
-      line-height: 2em;
-      .border-radius(0.5em);
+      & input:focus, select:focus, textarea:focus{
+           color: ~"@{@{cbname}n2}";
+           background-color:  ~"@{@{cbname}b3}";
+           border: 1px solid  ~"@{@{cbname}n1}";
+      }
+      
+          & input[type$="submit"], button{
+          .sosBoton(~"@{@{cbname}b5}",~"@{@{cbname}}");
 }
-    & input[type$="submit"]:hover{
-    background-color: @c1;
-    color: @c1b3;
-    }
+
+  
+    
+   & fieldset{
+    border-color:   ~"@{@{cbname}b3}";
+   }
+   & fieldset.dest{
+     background-color: ~"@{@{cbname}b6}";
+} 
+
+ .placeholder(~"@{@{cbname}b6}");
+ .selection(~"@{@{cbname}}",~"@{@{cbname}b5}");  
+
+}
+
+.sosBoton(@color,@bgcolor){
+     @finalcolor: lighten(color(@bgcolor),10%);
+    color:@color;
+    background-color:@bgcolor;
+    vertical-align: middle;
+    height: 2.5em;
+    line-height: 1em;
+    padding: 0.3em 2em 0.3em 2em;
+     .border-radius(0.3em);
+    border: darken(color(@bgcolor),3%) 1px solid;
+    .gradient(@bgcolor,@bgcolor,@finalcolor);
+    .box-shadow(@Sh22);
+     text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    &:hover{
+        @hcolor:lighten(color(@color),5%);      
+        @hbgcolor:darken(color(@bgcolor),5%);
+        @hfinalcolor:lighten(@hbgcolor,10%);
+    color:@hcolor;
+    background-color:@hbgcolor;
+    .gradient(@hbgcolor,@hbgcolor,@hfinalcolor);
+    } 
+}
 
 
-}
+    
+    
+    

@@ -10,13 +10,14 @@
 .makeCssColor(c2b);
 .makeCssColor(c2n);
 
-.blanco{
-    color: @white;
-}
+.blanco{color: @white;}
+.bg-blanco{background-color: @white;}
 
-.bg-blanco{
-    background-color: @white;
-}
+.negro{color:@black;}
+.bg-negro{background-color:@black;}
+
+.gris{color:@gray;}
+.bg-gris{background-color:@gray;}
 
 
 /* Background Colors class */
@@ -36,23 +37,27 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
+/*SELECTION*/
+body {
+.selection(@c1,@c1b5);    
+}
+
+
 /*FORMS*/
 .settForms();
 
 
-
 /*FORMS - COLORS */
 
-form.c1{
+form.c1,fieldset.c1,form.c2 *.inv{
 .settFormsColors("c1");
 }
 
-form.c2{
+form.c2,fieldset.c2,form.c1 *.inv{
 .settFormsColors("c2");
 }
 
-            
-
+              
 
 /* Classes*/
 
