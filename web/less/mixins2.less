@@ -325,33 +325,3 @@ transition: @prop @tdur @timfunc @tdelay;
 
 
 
-/*.colorCalc(@color,@pos,@Smax:0,@pasos: 9,@Bmax: 0){
-
-& when (@Bmax = 0){
-    @Bmax: lightness(@color);}    
-  
-  
-    @perc: colPerc(@Bmax,@pasos,@pos);
-    @col: lighten(@color,@perc);
-   & when  (@pos < 0) {@col: darken(@color,@perc);}
-    
-     & when (@Smax > 0) {
-      @perc: colPerc(@Smax,@pasos,@pos);
-      @col: desaturate(@col,@perc);
-    } 
-
-}
-
-.colPerc(@max,@pasos,@pos){
-  @int: @max/@pasos;
-  @pos: abs(@pos);
-  @pos: @pos+1;
-  @perc: @int*@pos;
-
-}
-
-.BM(@Bmax) when (@Bmax = 0){
-    @Bmax: lightness(@color); 
-}
-*/
-
