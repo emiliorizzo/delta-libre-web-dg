@@ -61,6 +61,18 @@ form.c2,fieldset.c2,form.c1 *.inv{
 
 /* Classes*/
 
+.dest{
+    font-size: 1.1em;
+    color: @headColor;
+}
+
+
+
+.chico{
+     font-size: 0.9em;
+}
+
+
 .round{
 .border-radius(50%);    
 }
@@ -74,6 +86,13 @@ form.c2,fieldset.c2,form.c1 *.inv{
     text-align: center;
 }
 
+.ader{
+   text-align: right;
+}
+
+.aizq{
+    text-align: left;
+}
 .logo-circ-cont{
 padding: 1em; 
 text-align: center;   
@@ -91,7 +110,9 @@ width: 100%;
     .rotate(-8deg); 
 }
 
-
+#logo-cont, .logo-circ-cont{
+    z-index: 1000;      
+}
 
 /*IDs*/
 #logo-splash{
@@ -109,17 +130,7 @@ width: 100%;
     padding-top: 1em;
     border: 5px solid @c1b1;
     .box-shadow(@Sh21); 
-     
- 
-     
-     
-     
 }
 
-#bienvenida-hdr{
-text-align:center;      
-}
 
-#form-splash{
-     .rotate(0deg); 
-}
+        
