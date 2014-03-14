@@ -8,9 +8,9 @@ form, fieldset{
     
 }
 input,select,textarea, button{
-     .border-radius(0.4em);
+     .border-radius(0.25em);
      height: 2em;
-     border: solid 1px;
+     border: solid 0.1em;
      margin: 0.5em;   
      font-family: @inputFontFamily;  
 }
@@ -55,7 +55,7 @@ fieldset{
 input:focus, select:focus, textarea:focus{
      font-weight: bold;
      outline: none;
-     border: 1px solid;
+    
 }
 
 & input:invalid{
@@ -98,18 +98,21 @@ legend:after{
           color: ~"@{@{cbname}n1}";
       }
       &  input,select, textarea{
-            background-color: ~"@{@{cbname}b4}";
-            border-color: ~"@{@{cbname}b3}";
+            background-color: ~"@{@{cbname}b5}";
+            border-color: ~"@{@{cbname}b2}";
+            .box-shadow(@Sh4);
       } 
     
       & input:hover{
-        background-color:  ~"@{@{cbname}b3}";
+        background-color:  ~"@{@{cbname}b5}";
+        .box-shadow(0px 0px 0.35em 0px ~"@{@{cbname}n1}");
         color: ~"@{@{cbname}n1}";
       }
       & input:focus, select:focus, textarea:focus{
            color: ~"@{@{cbname}n2}";
-           background-color:  ~"@{@{cbname}b3}";
-           border: 1px solid  ~"@{@{cbname}n1}";
+           background-color:  ~"@{@{cbname}b5}";
+           border: 0.1em solid  ~"@{@{cbname}n1}";
+            .box-shadow(0px 0px 0.4em 0px ~"@{@{cbname}n1}");
       }
       
           & input[type$="submit"], button{
