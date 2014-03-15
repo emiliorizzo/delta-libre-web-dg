@@ -13,36 +13,29 @@
 	
 	</head>
 	<body>
-
-		<div class="header-container">
-			<header class="wrapper clearfix">
-				
-			<div class="logo-circ-cont" id="logo-head-cont">
-				<a href="http://deltalibre.org.ar">
-					<img src="img/logo-deltalibre.png" id="logo-head" alt="logo deltalibre"/>
-				</a>
+			<!--head-container-->
+			<div class="header-container">
+				<header class="wrapper clearfix">
+					
+					<div id="head-nav-cont">
+						<nav>
+							<ul>
+								<li>
+									<a href="#">nav ul li a</a>
+								</li>
+								<li>
+									<a href="#">nav ul li a</a>
+								</li>
+								<li>
+									<a href="#">nav ul li a</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</header>
 			</div>
-				
-				<div id="head-nav-cont">
-					<nav>
-					<ul>
-						<li>
-							<a href="#">nav ul li a</a>
-						</li>
-						<li>
-							<a href="#">nav ul li a</a>
-						</li>
-						<li>
-							<a href="#">nav ul li a</a>
-						</li>
-					</ul>
-				</nav>
-				</div>
-				
-				
-				
-			</header>
-		</div>
+			<!--/head-container-->
+		
 
 		<div class="main-container">
 			<div class="main wrapper clearfix">
@@ -92,10 +85,22 @@
 					<img src="img/foto1.jpg" alt="foto de ejemplo" class="w70"/>
 					<img src="img/foto1.jpg" alt="foto de ejemplo" class="w30"/>
 					
+					<h3>Figure</h3>
+					<figure>
+						<img src="img/foto1.jpg" alt="foto de ejemplo" title="un título para la imagen"/>
+						<figcaption>Esta es una descripción de la imagen puesta dentro de un <em>figcaption</em></figcaption>
+					</figure>
+						
+					<h4>Figure class polaroid</h4>
+					<figure class="polaroid w50">
+						<img src="img/foto1.jpg" alt="foto de ejemplo" title="un título para la imagen"/>
+					</figure>	
+					
 					<figure class="polaroid">
 						<img src="img/foto1.jpg" alt="foto de ejemplo" title="un título para la imagen"/>
-						<figcaption>Esta es una descripción de la imagen</figcaption>
-						
+						<figcaption><strong>Esta es una descripción de la imagen puesta dentro de un <em>figcaption</em></strong>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor.
+						</figcaption>
 					</figure>
 						
 					<h2>Listas</h2>
@@ -364,7 +369,7 @@
 			AddColor('c2', -6, 6);
 			//Color 2
 				
-			AddSombras(24);
+			AddSombras(25);
 		</script>
 
 	</body>

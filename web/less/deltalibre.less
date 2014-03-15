@@ -46,6 +46,55 @@ body {
 .selection(@c1,@c1b5);    
 }
 
+/*IMAGENES*/
+figure figcaption{
+    font-size:0.8em;
+    margin: 0 2em 0 2em;
+}
+
+.polaroid{
+  
+  background-color: white;
+  border: solid 1px @white;
+ .border-radius(3px);
+ .box-shadow( @Sh1 ~"," @Sh5  ~"," @Sh25 );
+  padding-bottom:2%; 
+  
+  
+}
+
+.polaroid img{
+    position:relative;
+    z-index: 1;
+}
+
+.polaroid img:after{
+   content: "";
+   position: absolute;
+   top: 0;
+    left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 20;
+ .vig(@vig1);
+     
+     
+}
+
+.polaroid img{
+    max-width:92%;
+    height:auto;
+    margin:4% 4% 8% 4%;
+    .vignette(@vig1);
+}
+
+    
+
+
+figure.polaroid figcaption{
+    padding: 1em;
+    margin-top: -8%;
+}
 
 /*FORMS*/
 .settForms();
@@ -106,12 +155,20 @@ form.c2,fieldset.c2,form.c1 *.inv{
   .border-radius(1em);
 }
 
+#page-header{
+    width:100%;
+    border: 3px solid blue;
+    display: block;
+    height: auto;
+}
+
 #logo-head-cont{
 border: 1px red solid;
 width: 30%;
 display:inline;
 float:left;
 height: 3em;
+
 }
 
 #head-nav-cont{
@@ -136,7 +193,7 @@ width: 100%;
 }
 
 [id^="logo-"]{
-    z-index: 1000;      
+    z-index: 100;      
 }
 
 /*IDs*/

@@ -1,6 +1,7 @@
 /* ==========================================================================
  HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
  ========================================================================== */
+/* Preseteos de Vinetas */
 html,
 button,
 input,
@@ -28,7 +29,8 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-img {
+img,
+figure {
   max-width: 100%;
   height: auto;
 }

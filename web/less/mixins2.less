@@ -1,5 +1,8 @@
 @import "variables.less"; 
 
+
+
+
 // Border Radius
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
@@ -331,6 +334,35 @@ transition: @prop @tdur @timfunc @tdelay;
         width: ~"@{max}@{unit}";
     }
 .makeWSteps(@pref,@step,@unit,@max - @step);
+}
+
+
+.vignette(@vig){
+    /*Vignette para imagenes
+ @vig: preseteo de viñeta
+ * */
+position: relative;
+
+&:after{
+   content: "";
+   position: absolute;
+   top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 20;
+ .vig(@vig);
+ 
+}
+& img{
+   display: block;
+}
+}
+
+.vig(@vig){
+-webkit-box-shadow: @vig;
+-moz-box-shadow:    @vig;
+box-shadow:         @vig;  
 }
 
     
