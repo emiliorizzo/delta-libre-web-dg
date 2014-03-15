@@ -324,5 +324,13 @@ transition: @prop @tdur @timfunc @tdelay;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
 }
 
+.makeWSteps(@pref,@step,@unit,@max) when (@max >= @step) {
+   @sname: ~"@{pref}@{max}";
+   @s:@step;
+    &.@{sname}{
+        width: ~"@{max}@{unit}";
+    }
+.makeWSteps(@pref,@step,@unit,@max - @step);
+}
 
-
+    

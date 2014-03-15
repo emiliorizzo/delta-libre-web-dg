@@ -32,6 +32,9 @@
 .sombrasClass(@sombras);
 
 
+
+
+
 /*HEADERS FONTS*/
 h1,h2,h3,h4,h5,h6{
     font-family: @headingsFontFamily;
@@ -68,7 +71,6 @@ form.c2,fieldset.c2,form.c1 *.inv{
 }
 
 
-
 .chico{
      font-size: 0.9em;
 }
@@ -78,11 +80,7 @@ form.c2,fieldset.c2,form.c1 *.inv{
 .border-radius(50%);    
 }
 
-.cajauno{
-  background: @c1b6;
-  padding: 0px 2em 3em;
-  .border-radius(1em);
-}
+
 .acentro{
     text-align: center;
 }
@@ -94,6 +92,32 @@ form.c2,fieldset.c2,form.c1 *.inv{
 .aizq{
     text-align: left;
 }
+
+/*Withs step 5%*/
+.makeWSteps("w",5,"%",100);
+
+.inline{
+    display:inline;
+}
+
+.cajauno{
+  background: @c1b6;
+  padding: 0px 2em 3em;
+  .border-radius(1em);
+}
+
+#logo-head-cont{
+border: 1px red solid;
+width: 30%;
+display:inline;
+float:left;
+height: 3em;
+}
+
+#head-nav-cont{
+    width: 70%;
+}
+
 .logo-circ-cont{
 padding: 1em; 
 text-align: center;   
@@ -111,7 +135,7 @@ width: 100%;
     .rotate(-8deg); 
 }
 
-#logo-cont, .logo-circ-cont{
+[id^="logo-"]{
     z-index: 1000;      
 }
 
