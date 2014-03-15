@@ -1,6 +1,7 @@
 @import "variables.less"; 
 @import "mixins2.less"; 
 
+
 .settForms(){
 form, fieldset{
     padding: 1em;
@@ -15,6 +16,11 @@ input,select,textarea, button{
      font-family: @inputFontFamily;  
 }
 
+input[type="range"]{
+    height: 0.3em;
+}
+    
+
 input[type="submit"],button{
     .border-radius(0.5em);
     font-weight: bold;          
@@ -22,10 +28,6 @@ input[type="submit"],button{
 
 input{
 padding: 0 1em 0 1em;  
-}
-
-
-input[type="radio"]{
 }
 
 input::select{
@@ -58,8 +60,9 @@ input:focus, select:focus, textarea:focus{
 }
 
 & input:invalid{
-text-decoration: line-through;          
+text-decoration: line-through; 
 }
+
 
 form ul li{
     list-style: none;
@@ -83,7 +86,8 @@ legend:after{
     font-weight:bold;
 }
  
-  .placeholder(@gray,0.8em,italic);    
+  .placeholder(@gray,0.8em,italic);
+  .setCheckBoxAndRadios();    
 }
 
 
@@ -100,23 +104,27 @@ legend:after{
             background-color: ~"@{@{cbname}b5}";
             border-color: ~"@{@{cbname}b2}";
             .box-shadow(@Sh4);
-      } 
-    
-      & input:hover{
-        background-color:  ~"@{@{cbname}b5}";
-        .box-shadow(0px 0px 0.35em 0px ~"@{@{cbname}n1}");
-        color: ~"@{@{cbname}n1}";
-      }
-      & input:focus, select:focus, textarea:focus{
+          &:hover{
+            color: ~"@{@{cbname}n1}";
+            background-color:  ~"@{@{cbname}b5}";
+            .box-shadow(0px 0px 0.35em 0px ~"@{@{cbname}n1}");
+          }
+          
+          &:focus{
            color: ~"@{@{cbname}n2}";
-           background-color:  ~"@{@{cbname}b5}";
+           background-color:  ~"@{@{cbname}b6}";
            border: 0.1em solid  ~"@{@{cbname}n1}";
-            .box-shadow(0px 0px 0.4em 0px ~"@{@{cbname}n1}");
-      }
-      
+          .box-shadow(0px 0px 0.4em 0px ~"@{@{cbname}n1}");
+          text-decoration: none;
+          }  
+      } 
           & input[type="submit"], button{
           .sosBoton(~"@{@{cbname}b5}",~"@{@{cbname}}");
-}
+          }
+          
+          & input[type="file"]{
+              /*Falta implementar*/
+          }
 
   
     
@@ -170,7 +178,38 @@ legend:after{
     } 
 }
 
+.setCheckBoxAndRadios(){
+    /*Uso :root para que solo funcione con navs que soportan css3*/
+  :root{
+       & input[type="checkbox"],input[type="radio"]{
+       visibility:hidden;
+       position:absolute;
+            & +label:before{
+                font-family:@iconsFontFamily;
+                font-size:1.4em;
+                line-height: 1em;
+                cursor: pointer;
+                position: relative;
+            }
+        }
+        & input[type="checkbox"]+label:before{
+           content: "\e60d";
+        } 
+        & input[type="checkbox"]:checked + label:before{
+           content: "\e60c";
+        }
+        & input[type="checkbox"].tilde:checked + label:before{
+           content: "\e60b";
+        }
+        & input[type="radio"]+label:before{
+             content: "\e601";
+        }  
+        & input[type="radio"]:checked +label:before{
+           content: "\e600"; 
+        }
+        
+    }  
+}
 
-    
-    
-    
+
+
