@@ -2,8 +2,8 @@
  HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
  ========================================================================== */
 
-@import "variables.less"; 
-@import "mixins2.less"; 
+@import "variables"; 
+@import "mixins2"; 
 
 
 
@@ -17,12 +17,12 @@ body {
 }
 
 ::-moz-selection {
-    background: @selcolor;
+    background: $selcolor;
     text-shadow: none;
 }
 
 ::selection {
-    background: @selcolor;
+    background: $selcolor;
     text-shadow: none;
 }
 
@@ -30,7 +30,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid @c2;
+    border-top: 1px solid $c2;
     margin: 1em 0;
     padding: 0;
 }
@@ -58,11 +58,11 @@ textarea {
 }
 
 a,a:visited{
-    color:@linkColor;    
+    color:$linkColor;    
 }
 
 a:hover{
-    color:@linkColorHover;
+    color:$linkColorHover;
 }
 
 
@@ -74,7 +74,7 @@ a:hover{
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
-    color: @c1n6;
+    color: $c1n6;
 }
 
 .wrapper {
@@ -86,7 +86,7 @@ body {
  Theme
  =================== */
 
-.hColor(6); //todos los h con el mismo color
+@include hColor(6); //todos los h con el mismo color
 
 .main-container{
 
@@ -94,23 +94,23 @@ body {
 
 
 .header-container {
-    border-bottom: 10px solid @bordertopcolor;
+    border-bottom: 10px solid $bordertopcolor;
 }
 
 .footer-container, .main aside {
-    border-top: 10px solid @bordertopcolor;
+    border-top: 10px solid $bordertopcolor;
 }
 
 .header-container, .footer-container, .main aside {
-    background: @destcolor;
+    background: $destcolor;
 }
 
 .title {
-    color: @titleColor;
+    color: $titleColor;
 }
 
 aside{
-    .rounded-corners (1em);
+    @include rounded-corners (1em);
 }
 
 /* ==============
@@ -129,13 +129,13 @@ nav a ,nav a:visited{
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    color: @c1;
-    background: @navBg;
+    color: $c1;
+    background: $navBg;
 }
 
 nav a:hover {
-    color: @c1b1;
-    background: lighten(@navBg, 5%);
+    color: $c1b1;
+    background: lighten($navBg, 5%);
 }
 
 nav a:hover {
@@ -154,12 +154,12 @@ nav a:hover {
 }
 
 .main aside {
-    color: @c2b5;
+    color: $c2b5;
     padding: 0px 5% 10px;
 }
 
 .footer-container footer {
-    color: @c2b5;
+    color: $c2b5;
     padding: 20px 0;
 }
 
@@ -221,7 +221,7 @@ nav a:hover {
      ==================== */
 
     .header-container, .main aside , .footer-container{
-        .box-shadow(@Sh2);
+        @include box-shadow($Sh2);
     }
 
     /* ============
