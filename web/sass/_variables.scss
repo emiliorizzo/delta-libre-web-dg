@@ -2,139 +2,139 @@
 //<COLORES>
 
 //-[    C1    ]-------
-@c1:#188e90;
+$c1:#188e90;
 
 
 //-[ C1 blancos]
-@c1b:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
+$c1b:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
 
-@c1b1:lighten((desaturate(@c1,10%)),10%);
-@c1b2:lighten((desaturate(@c1,15%)),20%);
-@c1b3:lighten((desaturate(@c1,25%)),40%);
-@c1b4:lighten((desaturate(@c1,30%)),50%);
-@c1b5:lighten((desaturate(@c1,45%)),58%);
-@c1b6:lighten((desaturate(@c1,46%)),64%);
+$c1b1:lighten((desaturate($c1,10%)),10%);
+$c1b2:lighten((desaturate($c1,15%)),20%);
+$c1b3:lighten((desaturate($c1,25%)),40%);
+$c1b4:lighten((desaturate($c1,30%)),50%);
+$c1b5:lighten((desaturate($c1,45%)),58%);
+$c1b6:lighten((desaturate($c1,46%)),64%);
 
 //-[ C1 negros]
-@c1n:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
-@c1n1:darken(@c1,5%);
-@c1n2:darken(@c1,8%);
-@c1n3:darken(@c1,11%);
-@c1n4:darken(@c1,14%);
-@c1n5:darken(@c1,17%);
-@c1n6:darken(@c1,20%);
+$c1n:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
+$c1n1:darken($c1,5%);
+$c1n2:darken($c1,8%);
+$c1n3:darken($c1,11%);
+$c1n4:darken($c1,14%);
+$c1n5:darken($c1,17%);
+$c1n6:darken($c1,20%);
 
 //-[    C2    ]-------
-@c2:#db9127;
+$c2:#db9127;
 
 //-[ C2 blancos]
-@c2b:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
+$c2b:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
 
-@c2b1:lighten((desaturate(@c2,0%)),5%);
-@c2b2:lighten((desaturate(@c2,0%)),12%);
-@c2b3:lighten((desaturate(@c2,2%)),17%);
-@c2b4:lighten((desaturate(@c2,5%)),25%);
-@c2b5:lighten((desaturate(@c2,7%)),33%);
-@c2b6:lighten((desaturate(@c2,10%)),42%);
+$c2b1:lighten((desaturate($c2,0%)),5%);
+$c2b2:lighten((desaturate($c2,0%)),12%);
+$c2b3:lighten((desaturate($c2,2%)),17%);
+$c2b4:lighten((desaturate($c2,5%)),25%);
+$c2b5:lighten((desaturate($c2,7%)),33%);
+$c2b6:lighten((desaturate($c2,10%)),42%);
 
 //-[ C2 negros]
-@c2n:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
+$c2n:6; // para generar classes <--ACTUALIZAR CON CANTIDAD TOTAL
 
-@c2n1:darken(@c2,10%);
-@c2n2:darken(@c2,15%);
-@c2n3:darken(@c2,20%);
-@c2n4:darken(@c2,25%);
-@c2n5:darken(@c2,30%);
-@c2n6:darken(@c2,35%);
+$c2n1:darken($c2,10%);
+$c2n2:darken($c2,15%);
+$c2n3:darken($c2,20%);
+$c2n4:darken($c2,25%);
+$c2n5:darken($c2,30%);
+$c2n6:darken($c2,35%);
 
 //-[    C3    ]------
-@c3:#6cafaa;
+$c3:#6cafaa;
 //-[ C3 blancos]
-@c3b1:lighten(@c3, 20%);
-@c3b2:lighten(@c3, 40%);
-@c3b3:#84c78b;
+$c3b1:lighten($c3, 20%);
+$c3b2:lighten($c3, 40%);
+$c3b3:#84c78b;
 //-[ C3 negros]
-@c3n1:#4b7579;
+$c3n1:#4b7579;
 
 
 //-[    C4    ]-------
-@c4:#c53a10;
-@c4b1:#ca6b4e;
-@c4n1:#67002a;
+$c4:#c53a10;
+$c4b1:#ca6b4e;
+$c4n1:#67002a;
 
 
 //-[    SOMBRAS    ]-------
 
-@sombras: 25;
+$sombras: 25;
 
 //preseteos de sombras
-@Sh1: 0px 0px 6px 0px @cneutro;
-@Sh2:0px 0px 6px 0px @black;
-@Sh3:inset 2px 2px 30px 0px  darken(@cneutro,15%);
-@Sh4:0px 0px 1px 0px darken(@cneutro,30%);
-@Sh5:0px 0px 3px 1px @gray;
-@Sh6:inset 2px 2px 30px 0px  darken(@cneutro,10%);
-@Sh7:inset 1px 1px 3px  darken(@gray,15%);
-@Sh8: 1px 1px 3px 0px #666666;
-@Sh9: -1px -1px 3px 0px #666666;
-@Sh10: 1px 1px 3px 0px black;
-@Sh11:inset 2px 2px 30px 0px  darken(@gray,15%);
-@Sh12: 0px 0px 40px rgba(0, 0, 0, 0.4);
-@Sh13: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
-@Sh14: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
-@Sh15: 4px 4px 8px 0px rgba(0, 0, 0, 0.24); 
-@Sh16: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.20) ;
-@Sh17: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24); 
-@Sh18: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
-@Sh19: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
-@Sh20:inset 2px 2px 70px 0px  lighten(@c2,20%);
-@Sh21: 1px 1px 10px 0px @gray;
-@Sh22:  0 1px 2px rgba(0,0,0,.2);
-@Sh23:inset 0 0 4px rgba(0,0,0,0.2);
-@Sh24: 1px 0.1em 2px -6px rgba(0,0,0,0.5);
-@Sh25:inset 2px 2px 30px 0px  @c2b6;
+$Sh1: 0px 0px 6px 0px $cneutro;
+$Sh2:0px 0px 6px 0px $black;
+$Sh3:inset 2px 2px 30px 0px  darken($cneutro,15%);
+$Sh4:0px 0px 1px 0px darken($cneutro,30%);
+$Sh5:0px 0px 3px 1px $gray;
+$Sh6:inset 2px 2px 30px 0px  darken($cneutro,10%);
+$Sh7:inset 1px 1px 3px  darken($gray,15%);
+$Sh8: 1px 1px 3px 0px #666666;
+$Sh9: -1px -1px 3px 0px #666666;
+$Sh10: 1px 1px 3px 0px black;
+$Sh11:inset 2px 2px 30px 0px  darken($gray,15%);
+$Sh12: 0px 0px 40px rgba(0, 0, 0, 0.4);
+$Sh13: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+$Sh14: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+$Sh15: 4px 4px 8px 0px rgba(0, 0, 0, 0.24); 
+$Sh16: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.20) ;
+$Sh17: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24); 
+$Sh18: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+$Sh19: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+$Sh20:inset 2px 2px 70px 0px  lighten($c2,20%);
+$Sh21: 1px 1px 10px 0px $gray;
+$Sh22:  0 1px 2px rgba(0,0,0,.2);
+$Sh23:inset 0 0 4px rgba(0,0,0,0.2);
+$Sh24: 1px 0.1em 2px -6px rgba(0,0,0,0.5);
+$Sh25:inset 2px 2px 30px 0px  $c2b6;
 
 
 // Preseteos de Vinetas 
-@vig1:inset 0px 0px 30em rgba(0,0,0,1);
-@vig2:inset 0px 0px 20em rgba(0,0,0,0.4);
+$vig1:inset 0px 0px 30em rgba(0,0,0,1);
+$vig2:inset 0px 0px 20em rgba(0,0,0,0.4);
 
 
 //-----[Vars]-------
-@fondoPagina:#c3c3bf;
-@cneutro:#e7f0ee;
-@footBg: @c2b1;
-@cfondo: @gray;
-@selcolor: @gray;
-@cfondob1:lighten(@cfondo,2%);
-@bordertopcolor: @c1; //Color de tope boxes destacados
-@destcolor: @c2b2; // Color de boxes destacados
-@headColor:@c1;
-@titleColor: @headColor; 
-@navBg:@c2b2;
+$fondoPagina:#c3c3bf;
+$cneutro:#e7f0ee;
+$footBg: $c2b1;
+$cfondo: $gray;
+$selcolor: $gray;
+$cfondob1:lighten($cfondo,2%);
+$bordertopcolor: $c1; //Color de tope boxes destacados
+$destcolor: $c2b2; // Color de boxes destacados
+$headColor:$c1;
+$titleColor: $headColor; 
+$navBg:$c2b2;
 
 
-@oscuro: #52371a;
-@gray:#808080;
-@grayLight: #f2f2f4;
-@grayLighter: #aaa;
-@white: #fff;
-@black: #000;
+$oscuro: #52371a;
+$gray:#808080;
+$grayLight: #f2f2f4;
+$grayLighter: #aaa;
+$white: #fff;
+$black: #000;
 
 
 // Links
 // -------------------------
-@linkColor:             @c1b1;
-@linkColorHover:        @c2;
-@linkColorHoverBckg:    @c1b1;
+$linkColor:             $c1b1;
+$linkColorHover:        $c2;
+$linkColorHoverBckg:    $c1b1;
 
 
 //Bordes
-@borderColor:@c3b1;
+$borderColor:$c3b1;
 //Definidos 
 
-@fondo_nav:@c3;
-@border_nav:@c2;
+$fondo_nav:$c3;
+$border_nav:$c2;
 
 //</COLORES>
 
@@ -142,56 +142,56 @@
 
 
 //-------TAMAÑOS
-@headH: 4em;
-@footH: 3em;
-@menuH: 3em;
-@menuM : 2.6em;
+$headH: 4em;
+$footH: 3em;
+$menuH: 3em;
+$menuM : 2.6em;
 
 //-------FUENTES
-@sansFontFamily:        'Lato', sans-serif;
-@serifFontFamily:       'Lato', cursive;
-@monoFontFamily:        'Ubuntu Mono', sans-serif;
-@inputFontFamily:       @sansFontFamily;
-@iconsFontFamily:       'deltalibre';
+$sansFontFamily:        'Lato', sans-serif;
+$serifFontFamily:       'Lato', cursive;
+$monoFontFamily:        'Ubuntu Mono', sans-serif;
+$inputFontFamily:       $sansFontFamily;
+$iconsFontFamily:       'deltalibre';
 
-@baseFontSize:          16px;
-@baseFontFamily:        'Raleway', sans-serif;
-@baseLineHeight:        20px;
-@altFontFamily:         @serifFontFamily;
+$baseFontSize:          16px;
+$baseFontFamily:        'Raleway', sans-serif;
+$baseLineHeight:        20px;
+$altFontFamily:         $serifFontFamily;
 
-@headingsFontFamily:    'Lato', sans-serif; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         @c1; // empty to use BS default, @textColor
+$headingsFontFamily:    'Lato', sans-serif; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    bold;    // instead of browser default, bold
+$headingsColor:         $c1; // empty to use BS default, $textColor
 
 // Component sizing
 // -------------------------
 // Based on 14px font-size and 20px line-height
 
-@fontSizeLarge:         @baseFontSize * 1.25; // 
-@fontSizeSmall:         @baseFontSize * 0.85; // 
-@fontSizeMini:          @baseFontSize * 0.75; // 
-@menufontSz:            @baseFontSize * 1.2; 
-@paddingLarge:          11px 19px; // 44px
-@paddingSmall:          2px 10px;  // 26px
-@paddingMini:           0 6px;   // 22px
+$fontSizeLarge:         $baseFontSize * 1.25; // 
+$fontSizeSmall:         $baseFontSize * 0.85; // 
+$fontSizeMini:          $baseFontSize * 0.75; // 
+$menufontSz:            $baseFontSize * 1.2; 
+$paddingLarge:          11px 19px; // 44px
+$paddingSmall:          2px 10px;  // 26px
+$paddingMini:           0 6px;   // 22px
 
-@borderRadiusSmall:     1%;
-@baseBorderRadius:      2%;
-@borderRadiusLarge:     5%;
-@borderRadiusXlarge:    10%;
-@borderRadiusGigant:    20%;
+$borderRadiusSmall:     1%;
+$baseBorderRadius:      2%;
+$borderRadiusLarge:     5%;
+$borderRadiusXlarge:    10%;
+$borderRadiusGigant:    20%;
 
-@menuBorderSize:        4px;
+$menuBorderSize:        4px;
 
 // Horizontal forms & lists
 // -------------------------
-@horizontalComponentOffset:  180px;
-@bodyMargin: 3em;
+$horizontalComponentOffset:  180px;
+$bodyMargin: 3em;
 
 
 // H border color
 // -------------------------
-@hrBorder:                @grayLighter;
+$hrBorder:                $grayLighter;
 
-@shadow:  0 0 3px rgba(0, 0, 0, .3);
-@shadow2: 0 0 1px rgba(0, 0, 0, .5);
+$shadow:  0 0 3px rgba(0, 0, 0, .3);
+$shadow2: 0 0 1px rgba(0, 0, 0, .5);
