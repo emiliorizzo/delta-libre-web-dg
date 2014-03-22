@@ -1049,12 +1049,6 @@ form.c1 *.inv ::-moz-selection {
   -o-box-shadow: 1px 1px 10px 0px #808080;
   -ms-box-shadow: 1px 1px 10px 0px #808080;
 }
-#testnav {
-  border: red solid 1px;
-}
-header {
-  border: green 2px solid;
-}
 #head-logo-cont {
   width: 20%;
   border: #0000FF solid 3px;
