@@ -1,19 +1,19 @@
-@import "variables.less"; 
-@import "mixins2.less"; 
+@import "variables"; 
+@import "mixins2";
 
 
-.settForms(){
+@mixin settForms(){
 form, fieldset{
     padding: 1em;
-    .border-radius(1em);
+    @include border-radius(1em);
     
 }
 input,select,textarea, button{
-     .border-radius(0.25em);
+     @include border-radius(0.25em);
      height: 2em;
      border: solid 0.1em;
      margin: 0.5em;   
-     font-family: @inputFontFamily;  
+     font-family: $inputFontFamily;  
 }
 
 input[type="range"]{
@@ -22,7 +22,7 @@ input[type="range"]{
     
 
 input[type="submit"],button{
-    .border-radius(0.5em);
+    @include border-radius(0.5em);
     font-weight: bold;          
 }
 
@@ -44,7 +44,7 @@ textarea{
 } 
  
 label{
-      font-family: @inputFontFamily;
+      font-family: $inputFontFamily;
       font-size: 0.95em;
 }
  
@@ -69,7 +69,7 @@ form ul li{
 }     
  
 legend{
-    font-family: @inputFontFamily;
+    font-family: $inputFontFamily;
     margin-left: 2em;   
     font-weight: bold;
 }      
@@ -86,40 +86,40 @@ legend:after{
     font-weight:bold;
 }
  
-  .placeholder(@gray,0.8em,italic);
-  .setCheckBoxAndRadios();    
+  @include placeholder($gray,0.8em,italic);
+  @include setCheckBoxAndRadios();    
 }
 
 
-.settFormsColors(@cbname){
+@mixin settFormsColors($cbname){
 /*
- @cbname: prefijo de color
+ $cbname: prefijo de color
  * */
-      @fbackColor: ~"@{@{cbname}b6}";
-      background-color: @fbackColor;
+      $fbackColor: ~"${${cbname}b6}";
+      background-color: $fbackColor;
       & *{
-          color: ~"@{@{cbname}n1}";
+          color: ~"${${cbname}n1}";
       }
       &  input,select, textarea{
-            background-color: ~"@{@{cbname}b5}";
-            border-color: ~"@{@{cbname}b2}";
-            .box-shadow(@Sh4);
+            background-color: ~"${${cbname}b5}";
+            border-color: ~"${${cbname}b2}";
+            @include box-shadow($Sh4);
           &:hover{
-            color: ~"@{@{cbname}n1}";
-            background-color:  ~"@{@{cbname}b5}";
-            .box-shadow(0px 0px 0.35em 0px ~"@{@{cbname}n1}");
+            color: ~"${${cbname}n1}";
+            background-color:  ~"${${cbname}b5}";
+            @include box-shadow(0px 0px 0.35em 0px ~"${${cbname}n1}");
           }
           
           &:focus{
-           color: ~"@{@{cbname}n2}";
-           background-color:  ~"@{@{cbname}b6}";
-           border: 0.1em solid  ~"@{@{cbname}n1}";
-          .box-shadow(0px 0px 0.4em 0px ~"@{@{cbname}n1}");
+           color: ~"${${cbname}n2}";
+           background-color:  ~"${${cbname}b6}";
+           border: 0.1em solid  ~"${${cbname}n1}";
+          @include box-shadow(0px 0px 0.4em 0px ~"${${cbname}n1}");
           text-decoration: none;
           }  
       } 
           & input[type="submit"], button{
-          .sosBoton(~"@{@{cbname}b5}",~"@{@{cbname}}");
+          @include sosBoton(~"${${cbname}b5}",~"${${cbname}}");
           }
           
           & input[type="file"]{
@@ -129,10 +129,10 @@ legend:after{
   
     
    & fieldset{
-    border-color:   ~"@{@{cbname}b3}";
+    border-color:   ~"${${cbname}b3}";
    }
    & fieldset.dest{
-     background-color: ~"@{@{cbname}b6}";
+     background-color: ~"${${cbname}b6}";
 } 
 
 /*input.dest:focus{
@@ -143,49 +143,49 @@ legend:after{
 
 
   & input{
-    .phColor(~"@{@{cbname}b1}");
-   .placeholder(@phColor,0.8em,italic);   
+    @include phColor(~"${${cbname}b1}");
+   @include placeholder($phColor,0.8em,italic);   
   } 
- .selection(~"@{@{cbname}}",~"@{@{cbname}b5}");  
+ @include selection(~"${${cbname}}",~"${${cbname}b5}");  
 
 }
 
 
-.phColor(@c){
-    @phColor:desaturate(color(@c),35%);
+@function phColor($c){
+    $phColor:desaturate(color($c),35%);
 }
 
-.sosBoton(@color,@bgcolor){
-     @finalcolor: lighten(color(@bgcolor),10%);
-    color:@color;
-    background-color:@bgcolor;
+@mixin sosBoton($color,$bgcolor){
+     $finalcolor: lighten(color($bgcolor),10%);
+    color:$color;
+    background-color:$bgcolor;
     vertical-align: middle;
     height: 2.5em;
     line-height: 1em;
     padding: 0.3em 2em 0.3em 2em;
-     .border-radius(0.3em);
-    border: darken(color(@bgcolor),3%) 1px solid;
-    .gradient(@bgcolor,@bgcolor,@finalcolor);
-    .box-shadow(@Sh22);
+     @include border-radius(0.3em);
+    border: darken(color($bgcolor),3%) 1px solid;
+    @include gradient($bgcolor,$bgcolor,$finalcolor);
+    @include box-shadow($Sh22);
      text-shadow: 0 1px 1px rgba(0,0,0,.3);
     &:hover{
-        @hcolor:lighten(color(@color),5%);      
-        @hbgcolor:darken(color(@bgcolor),5%);
-        @hfinalcolor:lighten(@hbgcolor,10%);
-    color:@hcolor;
-    background-color:@hbgcolor;
-    .gradient(@hbgcolor,@hbgcolor,@hfinalcolor);
+        $hcolor:lighten(color($color),5%);      
+        $hbgcolor:darken(color($bgcolor),5%);
+        $hfinalcolor:lighten($hbgcolor,10%);
+    color:$hcolor;
+    background-color:$hbgcolor;
+    @include gradient($hbgcolor,$hbgcolor,$hfinalcolor);
     } 
 }
 
-.setCheckBoxAndRadios(){
+@mixin setCheckBoxAndRadios(){
     /*Uso :root para que solo funcione con navs que soportan css3*/
   :root{
        & input[type="checkbox"],input[type="radio"]{
        visibility:hidden;
        position:absolute;
             & +label:before{
-                font-family:@iconsFontFamily;
+                font-family:$iconsFontFamily;
                 font-size:1.4em;
                 line-height: 1em;
                 cursor: pointer;
