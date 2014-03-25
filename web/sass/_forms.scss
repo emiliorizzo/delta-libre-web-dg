@@ -59,7 +59,7 @@ input:focus, select:focus, textarea:focus{
     
 }
 
-& input:invalid{
+ input:invalid{
 text-decoration: line-through; 
 }
 
@@ -95,31 +95,31 @@ legend:after{
 /*
  $cbname: prefijo de color
  * */
-      $fbackColor: ~"${${cbname}b6}";
+      $fbackColor: evalColor(#{$cbname}b6);
       background-color: $fbackColor;
       & *{
-          color: ~"${${cbname}n1}";
+          color: evalColor(#{$cbname}n1);
       }
       &  input,select, textarea{
-            background-color: ~"${${cbname}b5}";
-            border-color: ~"${${cbname}b2}";
+            background-color: evalColor(#{$cbname}b5);
+            border-color: evalColor(#{$cbname}b2);
             @include box-shadow($Sh4);
           &:hover{
-            color: ~"${${cbname}n1}";
-            background-color:  ~"${${cbname}b5}";
-            @include box-shadow(0px 0px 0.35em 0px ~"${${cbname}n1}");
+            color: #{$cbname}n1;
+            background-color:  evalColor(#{$cbname}b5);
+            @include box-shadow(0px 0px 0.35em 0px #{$cbname}n1);
           }
           
           &:focus{
-           color: ~"${${cbname}n2}";
-           background-color:  ~"${${cbname}b6}";
-           border: 0.1em solid  ~"${${cbname}n1}";
-          @include box-shadow(0px 0px 0.4em 0px ~"${${cbname}n1}");
+           color: evalColor(#{$cbname}n2);
+           background-color:  evalColor(#{$cbname}b6);
+           border: 0.1em solid  evalColor(#{$cbname}n1);
+          @include box-shadow(0px 0px 0.4em 0px #{$cbname}n1);
           text-decoration: none;
           }  
       } 
           & input[type="submit"], button{
-          @include sosBoton(~"${${cbname}b5}",~"${${cbname}}");
+          @include sosBoton(evalColor(#{$cbname}b5),evalColor(#{$cbname}));
           }
           
           & input[type="file"]{
@@ -129,10 +129,10 @@ legend:after{
   
     
    & fieldset{
-    border-color:   ~"${${cbname}b3}";
+    border-color:   evalColor(#{$cbname}b3);
    }
    & fieldset.dest{
-     background-color: ~"${${cbname}b6}";
+     background-color: evalColor(#{$cbname}b6);
 } 
 
 /*input.dest:focus{
@@ -143,20 +143,23 @@ legend:after{
 
 
   & input{
-    @include phColor(~"${${cbname}b1}");
+    $phColor: phColor(evalColor(#{$cbname}b1));
    @include placeholder($phColor,0.8em,italic);   
   } 
- @include selection(~"${${cbname}}",~"${${cbname}b5}");  
+ @include selection(evalColor(#{$cbname}),evalColor(#{$cbname}b5));  
 
 }
-
 
 @function phColor($c){
-    $phColor:desaturate(color($c),35%);
+    @return desaturate($c,35%);
 }
 
+
+
+
+
 @mixin sosBoton($color,$bgcolor){
-     $finalcolor: lighten(color($bgcolor),10%);
+     $finalcolor: lighten($bgcolor,10%);
     color:$color;
     background-color:$bgcolor;
     vertical-align: middle;
@@ -164,13 +167,13 @@ legend:after{
     line-height: 1em;
     padding: 0.3em 2em 0.3em 2em;
      @include border-radius(0.3em);
-    border: darken(color($bgcolor),3%) 1px solid;
+    border: darken($bgcolor,3%) 1px solid;
     @include gradient($bgcolor,$bgcolor,$finalcolor);
     @include box-shadow($Sh22);
      text-shadow: 0 1px 1px rgba(0,0,0,.3);
     &:hover{
-        $hcolor:lighten(color($color),5%);      
-        $hbgcolor:darken(color($bgcolor),5%);
+        $hcolor:lighten($color,5%);      
+        $hbgcolor:darken($bgcolor,5%);
         $hfinalcolor:lighten($hbgcolor,10%);
     color:$hcolor;
     background-color:$hbgcolor;

@@ -1,0 +1,13 @@
+@import "color_mixins";
+@import "variables";
+@import "mixins2";
+
+
+@include colorClass($colores,'c');
+@include colorsClases($blancos,'c','b');
+@include colorsClases($negros,'c','n');
+
+@include sombrasClass($sombras);
+//@include ColorSetsClasses('Cs',$colors_sets);
+
+

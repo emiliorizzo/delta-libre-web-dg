@@ -1,33 +1,28 @@
-@import "variables.less"; 
-@import "mixins2.less"; 
-@import "forms.less"; 
+@import "variables"; 
+@import "mixins2"; 
+@import "forms"; 
 
 /* Colors class */
-.makeCssOneColorClass(c1);
-.makeCssColor(c1b);
-.makeCssColor(c1n);
-.makeCssColor(c2b);
-.makeCssColor(c2n);
+@include colorClass($colores,'c');
+@include colorsClases($blancos,'c','b');
+@include colorsClases($negros,'c','n');
 
-.blanco{color: @white;}
-.bg-blanco{background-color: @white;}
 
-.negro{color:@black;}
-.bg-negro{background-color:@black;}
+.blanco{color: $white;}
+.bg-blanco{background-color: $white;}
 
-.gris{color:@gray;}
-.bg-gris{background-color:@gray;}
+.negro{color:$black;}
+.bg-negro{background-color:$black;}
+
+.gris{color:$gray;}
+.bg-gris{background-color:$gray;}
 
 
 /* Background Colors class */
-.makeCssOneColorClass(c2);
-.makeCssBGColor(c1b);
-.makeCssBGColor(c1n);
-.makeCssBGColor(c2b);
-.makeCssBGColor(c2n);
+
 
 /* Sombras */
-.sombrasClass(@sombras);
+@include sombrasClass($sombras);
 
 
 
@@ -36,13 +31,13 @@
 /*HEADERS FONTS*/
 
 h1,h2,h3,h4,h5,h6{
-    font-family: @headingsFontFamily;
+    font-family: $headingsFontFamily;
 }
 
 
 /*SELECTION*/
 body {
-.selection(@c1,@c1b5);    
+@include selection($c1,$c1b5);    
 }
 
 /*IMAGENES*/
@@ -52,11 +47,10 @@ figure figcaption{
 }
 
 .polaroid{
-  
   background-color: white;
-  border: solid 1px @white;
- .border-radius(3px);
- .box-shadow( @Sh1 ~"," @Sh5  ~"," @Sh25 );
+  border: solid 1px $white;
+ @include border-radius(3px);
+ @include box-shadow( $Sh1,$Sh5,$Sh25 );
   padding-bottom:2%; 
   
   
@@ -75,7 +69,7 @@ figure figcaption{
  width: 100%;
  height: 100%;
  z-index: 20;
- .vig(@vig1);
+ @include vig($vig1);
      
      
 }
@@ -84,7 +78,7 @@ figure figcaption{
     max-width:92%;
     height:auto;
     margin:4% 4% 8% 4%;
-    .vignette(@vig1);
+    @include vignette($vig1);
 }
 
     
@@ -96,17 +90,17 @@ figure.polaroid figcaption{
 }
 
 /*FORMS*/
-.settForms();
+@include settForms();
 
 
 /*FORMS - COLORS */
 
 form.c1,fieldset.c1,form.c2 *.inv{
-.settFormsColors("c1");
+@include settFormsColors("c1");
 }
 
 form.c2,fieldset.c2,form.c1 *.inv{
-.settFormsColors("c2");
+@include settFormsColors("c2");
 }
 
               
@@ -115,7 +109,7 @@ form.c2,fieldset.c2,form.c1 *.inv{
 
 .dest{
     font-size: 1.1em;
-    color: @headColor;
+    color: $headColor;
 }
 
 
@@ -125,7 +119,7 @@ form.c2,fieldset.c2,form.c1 *.inv{
 
 
 .round{
-.border-radius(50%);    
+@include border-radius(50%);    
 }
 
 
@@ -142,16 +136,16 @@ form.c2,fieldset.c2,form.c1 *.inv{
 }
 
 /*Withs step 5%*/
-.makeWSteps("w",5,"%",100);
+@include makeWSteps("w",5,"%",100);
 
 .inline{
     display:inline;
 }
 
 .cajauno{
-  background: @c1b6;
+  background: $c1b6;
   padding: 0px 2em 3em;
-  .border-radius(1em);
+  @include border-radius(1em);
 }
 
 #page-header{
@@ -182,13 +176,13 @@ width: 100%;
 
 
 .logo-circ-cont img{
-    .border-radius(50%);
-    background: @white;
+    @include border-radius(50%);
+    background: $white;
     height: auto;   
     padding: 2px;
     border: 4px solid;
-    .box-shadow(@Sh20 ~"," @Sh21); 
-    .rotate(-8deg); 
+    @include box-shadow($Sh20,$Sh21); 
+    @include rotate(-8deg); 
 }
 
 [id^="logo-"]{
@@ -209,8 +203,8 @@ width: 100%;
     width:100%;
     max-width: 600px;
     padding-top: 1em;
-    border: 5px solid @c1b1;
-    .box-shadow(@Sh21); 
+    border: 5px solid $c1b1;
+    @include box-shadow($Sh21); 
 }
 
 #testnav{

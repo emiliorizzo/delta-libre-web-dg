@@ -1,3 +1,4 @@
+@import 'color_mixins';
 //principales
 //<COLORES>
 
@@ -63,6 +64,28 @@ $c4b1:#ca6b4e;
 $c4n1:#67002a;
 
 
+$cneutro:#e7f0ee;
+
+$oscuro: #52371a;
+$gray:#808080;
+$grayLight: #f2f2f4;
+$grayLighter: #aaa;
+$white: #fff;
+$black: #000;
+
+
+/* ESTO ES RIDICULO
+ * Listas para el pelotudo de sass que no interpola variables (less si) 
+ * Si ya se que puedo hacer solo las listas, pero por retrocompatibilidad no puedo.
+ * PARA QUE colors_mixins pueda crear las classes para cada color para verlos en test.hmtl
+ * */
+$colores: $c1,$c2;
+$blancos: ($c1b1, $c1b2, $c1b3,$c1b4,$c1b5,$c1b6) ($c2b1, $c2b2, $c2b3,$c2b4,$c2b5,$c2b6);
+$negros: ($c1n1, $c1n2, $c1n3,$c1n4,$c1n5,$c1n6) ($c2n1, $c2n2, $c2n3,$c2n4,$c2n5,$c2n6);
+
+
+
+
 //-[    SOMBRAS    ]-------
 
 $sombras: 25;
@@ -102,7 +125,7 @@ $vig2:inset 0px 0px 20em rgba(0,0,0,0.4);
 
 //-----[Vars]-------
 $fondoPagina:#c3c3bf;
-$cneutro:#e7f0ee;
+
 $footBg: $c2b1;
 $cfondo: $gray;
 $selcolor: $gray;
@@ -114,12 +137,7 @@ $titleColor: $headColor;
 $navBg:$c2b2;
 
 
-$oscuro: #52371a;
-$gray:#808080;
-$grayLight: #f2f2f4;
-$grayLighter: #aaa;
-$white: #fff;
-$black: #000;
+
 
 
 // Links

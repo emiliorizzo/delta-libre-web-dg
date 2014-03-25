@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*Creo 2 clases por cada color 
+ * mas que nada para testearlos */
+
+/*@color = color principal
+ @cant = cantidad de pasos
+ @pos = posición en la escala
+ @Smax = % desaturación máxima, si es 0 no hace nada
+ @Bmax = % aumento o disminución máxima del brillo si es 0 la calcula solo a partir del color 
+  */
+@function colorCalc($color,$pos,$Smax:0,$pasos: 9,$Bmax: 0){
+  @if $Bmax == 0 {$Bmax: lightness($color);}
+    $perc: colPerc($Bmax,$pasos,$pos);
+    $col: lighten($color,$perc);
+    @if $pos < 0 {$col: darken($color,$perc);}
+    
+    @if $Smax > 0{
+      $perc: colPerc($Smax,$pasos,$pos);
+      $col: desaturate($col,$perc);
+    }    
+  @return $col;
+}
+
+@function colPerc($max,$pasos,$pos){
+  $int: $max/$pasos;
+  $pos: abs($pos);
+  $pos: $pos+1;
+  $perc: $int*$pos;
+  @return $perc;
+}
+
+@mixin colorsClases($clist,$p,$pp){
+  @for $i from 1 to (length($clist)+1){
+    $col: nth($clist,$i);
+    $ppp:#{$p}#{$i}#{$pp};
+    @include colorClass($col,$ppp);
+    }
+}
+
+@mixin colorClass($col,$p){
+   @for $j from 1 to (length($col)+1){
+     $color: nth($col,$j);
+     $name:#{$p}#{$j};
+      .#{$name}{
+        color: $color;  
+        }
+       .bg-#{$name}{
+         background-color: $color;
+       } 
+}
+}
+/******COLORSETS FUNCTIONS *****/
+@function Cs-color($Cs){
+  @return nth($Cs,1);
+}
+@function Cs-bgcolor($Cs){
+  @return nth($Cs,2);
+}
+@function Cs-hcolor($Cs){
+  @return nth($Cs,3);
+}
+@function Cs-bghcolor($Cs){
+  @return nth($Cs,4);
+}
+
+@mixin ColorSetsClasses($p,$col_sets){
+  @for $i from 1 to (length($col_sets)+1){
+    $Cs: nth($col_sets,$i);
+    @include CsClass(#{$p}#{$i},$Cs);
+  }
+}
+
+@mixin CsClass($n,$Cs){
+  .#{$n}{
+   color: Cs-color($Cs);
+   background-color: Cs-bgcolor($Cs); 
+  }
+  .#{$n}:hover{
+   color: Cs-hcolor($Cs);
+   background-color: Cs-bghcolor($Cs); 
+  }
+}
+
