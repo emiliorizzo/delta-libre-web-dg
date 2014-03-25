@@ -1,0 +1,67 @@
+@font-face {
+	font-family: 'deltalibre';
+	src:url('fonts/deltalibre.eot?1rptus');
+	src:url('fonts/deltalibre.eot?#iefix1rptus') format('embedded-opentype'),
+		url('fonts/deltalibre.woff?1rptus') format('woff'),
+		url('fonts/deltalibre.ttf?1rptus') format('truetype'),
+		url('fonts/deltalibre.svg?1rptus#deltalibre') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'deltalibre';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-radio-check:before {
+	content: "\e600";
+}
+.icon-radio:before {
+	content: "\e601";
+}
+.icon-persona:before {
+	content: "\e602";
+}
+.icon-lupa-menos:before {
+	content: "\e603";
+}
+.icon-lupa-mas:before {
+	content: "\e604";
+}
+.icon-lupa:before {
+	content: "\e605";
+}
+.icon-logo:before {
+	content: "\e606";
+}
+.icon-foto:before {
+	content: "\e607";
+}
+.icon-comentarios:before {
+	content: "\e608";
+}
+.icon-circ-rss:before {
+	content: "\e609";
+}
+.icon-circ-logo:before {
+	content: "\e60a";
+}
+.icon-checkbox-check-tilde:before {
+	content: "\e60b";
+}
+.icon-checkbox-check-cruz:before {
+	content: "\e60c";
+}
+.icon-checkbox:before {
+	content: "\e60d";
+}
