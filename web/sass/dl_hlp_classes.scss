@@ -1,13 +1,14 @@
-@import "color_mixins";
-@import "variables";
-@import "mixins2";
+@import "variables"; 
+@import "mixins2"; 
 
-
+/* Colors class */
 @include colorClass($colores,'c');
 @include colorsClases($blancos,'c','b');
 @include colorsClases($negros,'c','n');
 
+/* Sombras */
 @include sombrasClass($sombras);
-//@include ColorSetsClasses('Cs',$colors_sets);
 
 
+/*Withs step 5%*/
+@include makeWSteps("w",5,"%",100);

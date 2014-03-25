@@ -1,9 +1,11 @@
+@charset "utf-8";
+@import "variables"; 
+@import "mixins2"; 
+
 /* ==========================================================================
  HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
  ========================================================================== */
 
-@import "variables"; 
-@import "mixins2"; 
 
 
 
@@ -86,7 +88,11 @@ body {
  Theme
  =================== */
 
-@include hColor(6); //todos los h con el mismo color
+//todos los h con el mismo color
+h1,h2,h3,h4,h5,h6{
+  color: $headColor;
+}
+
 
 .main-container{
 

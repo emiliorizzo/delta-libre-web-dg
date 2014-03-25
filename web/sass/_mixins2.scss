@@ -124,10 +124,14 @@ $Sh16: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.20) ;
 $Sh17: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24); 
 $Sh18: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
 $Sh19: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
-$Sh20: -1px -1px 2px #004977;
-$Sh21: 2px 2px 4px 0px rgba(0, 0, 0, 0.24); 
+$Sh20:inset 2px 2px 70px 0px  lighten($c2,20%);
+$Sh21: 1px 1px 10px 0px $gray;
+$Sh22:  0 1px 2px rgba(0,0,0,.2);
+$Sh23:inset 0 0 4px rgba(0,0,0,0.2);
+$Sh24: 1px 0.1em 2px -6px rgba(0,0,0,0.5);
+$Sh25:inset 2px 2px 30px 0px  $c2b6;
 /*Lista  para test*/
-$sombras: ($Sh1,$Sh2,$Sh3,$Sh4,$Sh5,$Sh6,$Sh7,$Sh8,$Sh9,$Sh10,$Sh11,$Sh12,$Sh13,$Sh14,$Sh15,$Sh16,$Sh17,$Sh18,$Sh19,$Sh20,$Sh21);
+$sombras: ($Sh1,$Sh2,$Sh3,$Sh4,$Sh5,$Sh6,$Sh7,$Sh8,$Sh9,$Sh10,$Sh11,$Sh12,$Sh13,$Sh14,$Sh15,$Sh16,$Sh17,$Sh18,$Sh19,$Sh20,$Sh21,$Sh22,$Sh23,$Sh24,$Sh25);
 
 /* Preseteos de Vinetas */
 $vig1:inset 0px 0px 10em rgba(0,0,0,1);
@@ -314,16 +318,6 @@ transition: $prop $tdur $timfunc $tdelay;
 }*/
 
 
-/* Selectores H con el mismo color*/
-/* @mixin hColor ($index) when ($index > 0) {
-    h${index} {
-        color: $headColor;
-    }
-    @include hColor($index - 1);
-}*/
-
-
-
 /*Vignette para imagenes
  @vig: preseteo de viñeta
  * */
@@ -444,19 +438,6 @@ box-shadow:         $vig;
 }
 
 
-@mixin hColor ($index)  {
-  @while ($index > 0){
-    h#{$index} {
-        color: $headColor;
-    }
-    @include hColor($index - 1);
-  }
-    
-}
-
-
-
-
 @mixin gradient($color: #F5F5F5, $start: #EEE, $stop: #FFF) {
   background: $color;
   background: -webkit-gradient(linear,
@@ -476,14 +457,16 @@ box-shadow:         $vig;
 }
 
 @mixin makeWSteps($pref,$step,$unit,$max) {
-  @while ($max >= $step){
-    $sname: #{$pref}#{$max};
-      #{$sname}{
+   
+   @if $max >= $step{
+      $sname: #{$pref}#{$max};
+      .#{$sname}{
         width: #{$max}#{$unit};
       }
-@include makeWSteps($pref,$step,$unit,$max - $step);
+   @include makeWSteps($pref,$step,$unit,$max - $step);
+   }
+   
   }
-}
 
 
 @mixin selection($color,$bgcolor){

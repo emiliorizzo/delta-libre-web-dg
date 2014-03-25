@@ -2,13 +2,18 @@
 	Solo para formatear la paleta de colores de muestra
 
 [ deltalibre.css ]
-	Todo lo específico para delta libre, las clases solo de colores y colores de bg están acá
+	Todo lo especï¿½fico para delta libre
+
+[ dl_hlp_classes.css ]
+ DeltaLibre Helpers Classes
+ Clases para tamaÃ±os y colores por fuera de los selectores html
+ las clases solo de colores y colores de bg estï¿½n acï¿½	
 
 [ html.css ]
-    Estilo para html colores incluídos.
+    Estilo para html colores incluï¿½dos.
 
 [ main.css ]
-	una pavada, carga html.css y deltalibre.css
+	una pavada, carga todos los css menos normalize
 
 [ normalize.css ]
 	normalize.css v1.1.0 | MIT License | git.io/normalize

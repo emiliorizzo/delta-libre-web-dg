@@ -10,8 +10,8 @@
 .fila {
     display: block;
     float: left;
-    width:10%;
-    margin: 0 5% 5% 5%;
+    width:30%;
+    margin:10%;
 }
 .col, .som , .cs{
     height: 50px;
@@ -21,6 +21,7 @@
     @include rounded-corners (10px);
     margin: 10px 0 0 0;
     font-weight: bold;
+    color: white;
 }
 .cs *{
   cursor: hand;
@@ -29,6 +30,10 @@
 .som{
   margin-top: 20px;
   color: black;
+  display: inline;
+  float: left;
+  width: 100px;
+  margin: 30px;
 }
 
 .col{

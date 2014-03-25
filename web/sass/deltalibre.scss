@@ -2,10 +2,7 @@
 @import "mixins2"; 
 @import "forms"; 
 
-/* Colors class */
-@include colorClass($colores,'c');
-@include colorsClases($blancos,'c','b');
-@include colorsClases($negros,'c','n');
+
 
 
 .blanco{color: $white;}
@@ -16,16 +13,6 @@
 
 .gris{color:$gray;}
 .bg-gris{background-color:$gray;}
-
-
-/* Background Colors class */
-
-
-/* Sombras */
-@include sombrasClass($sombras);
-
-
-
 
 
 /*HEADERS FONTS*/
@@ -135,8 +122,7 @@ form.c2,fieldset.c2,form.c1 *.inv{
     text-align: left;
 }
 
-/*Withs step 5%*/
-@include makeWSteps("w",5,"%",100);
+
 
 .inline{
     display:inline;
