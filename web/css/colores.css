@@ -1,0 +1,531 @@
+@charset "CP850";
+/*Creo 2 clases por cada color 
+ * mas que nada para testearlos */
+/*@color = color principal
+ @cant = cantidad de pasos
+ @pos = posici¢n en la escala
+ @Smax = % desaturaci¢n m xima, si es 0 no hace nada
+ @Bmax = % aumento o disminuci¢n m xima del brillo si es 0 la calcula solo a partir del color 
+  */
+/******COLORSETS FUNCTIONS *****/
+/*Creo 2 clases por cada color 
+ * mas que nada para testearlos */
+/*@color = color principal
+ @cant = cantidad de pasos
+ @pos = posici¢n en la escala
+ @Smax = % desaturaci¢n m xima, si es 0 no hace nada
+ @Bmax = % aumento o disminuci¢n m xima del brillo si es 0 la calcula solo a partir del color 
+  */
+/******COLORSETS FUNCTIONS *****/
+/* ESTO ES RIDICULO
+ * Listas para el pelotudo de sass que no interpola variables (less si) 
+ * Si ya se que puedo hacer solo las listas, pero por retrocompatibilidad no puedo.
+ * PARA QUE colors_mixins pueda crear las classes para cada color para verlos en test.hmtl
+ * */
+/*Creo 2 clases por cada color 
+ * mas que nada para testearlos */
+/*@color = color principal
+ @cant = cantidad de pasos
+ @pos = posici¢n en la escala
+ @Smax = % desaturaci¢n m xima, si es 0 no hace nada
+ @Bmax = % aumento o disminuci¢n m xima del brillo si es 0 la calcula solo a partir del color 
+  */
+/******COLORSETS FUNCTIONS *****/
+/* ESTO ES RIDICULO
+ * Listas para el pelotudo de sass que no interpola variables (less si) 
+ * Si ya se que puedo hacer solo las listas, pero por retrocompatibilidad no puedo.
+ * PARA QUE colors_mixins pueda crear las classes para cada color para verlos en test.hmtl
+ * */
+/*@mixin filter($f,$value){
+-webkit-filter: $f~"(${value})";
+-moz-filter: $f~"(${value})";
+-o-filter: $f~"(${value})";
+-ms-filter: $f~"(${value})";
+}*/
+/*Lista  para test*/
+/* Preseteos de Vinetas */
+/*CSS3 transition-- 
+$prop: propiedad | all 
+
+$tdur:50ms
+
+$timfunc:
+linear
+ease-in
+ease-out
+ease-in-out
+step-start
+step-end
+
+$tdelay: 1s | 1000 ms
+* 
+* */
+/*.center-porcentaje($cant,$ancho){
+   width:$ancho+"%";
+  $margin=2;
+  HACER LA CUENTA
+
+}*/
+/* Selectores H con el mismo color*/
+/* @mixin hColor ($index) when ($index > 0) {
+    h${index} {
+        color: $headColor;
+    }
+    @include hColor($index - 1);
+}*/
+/*Vignette para imagenes
+ @vig: preseteo de vi¤eta
+ * */
+/*
+ * @name: class name
+ * @Cs: color set list
+ * @$h : altura
+ * */
+/* line 44, ../sass/_color_mixins.scss */
+.c1 {
+  color: #188e90;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1 {
+  background-color: #188e90;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2 {
+  color: #db9127;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2 {
+  background-color: #db9127;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1b1 {
+  color: #2aafb1;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1b1 {
+  background-color: #2aafb1;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1b2 {
+  color: #43c8cb;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1b2 {
+  background-color: #43c8cb;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1b3 {
+  color: #9ad9da;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1b3 {
+  background-color: #9ad9da;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1b4 {
+  color: #c1e5e6;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1b4 {
+  background-color: #c1e5e6;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1b5 {
+  color: #e2eeee;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1b5 {
+  background-color: #e2eeee;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1b6 {
+  color: #f5f9f9;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1b6 {
+  background-color: #f5f9f9;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2b1 {
+  color: #df9c3d;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2b1 {
+  background-color: #df9c3d;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2b2 {
+  color: #e4ac5b;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2b2 {
+  background-color: #e4ac5b;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2b3 {
+  color: #e6b773;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2b3 {
+  background-color: #e6b773;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2b4 {
+  color: #eac897;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2b4 {
+  background-color: #eac897;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2b5 {
+  color: #f0daba;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2b5 {
+  background-color: #f0daba;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2b6 {
+  color: #f8eee0;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2b6 {
+  background-color: #f8eee0;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1n1 {
+  color: #14787a;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1n1 {
+  background-color: #14787a;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1n2 {
+  color: #126c6d;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1n2 {
+  background-color: #126c6d;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1n3 {
+  color: #105f60;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1n3 {
+  background-color: #105f60;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1n4 {
+  color: #0e5253;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1n4 {
+  background-color: #0e5253;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1n5 {
+  color: #0c4546;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1n5 {
+  background-color: #0c4546;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c1n6 {
+  color: #093839;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c1n6 {
+  background-color: #093839;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2n1 {
+  color: #b1751e;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2n1 {
+  background-color: #b1751e;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2n2 {
+  color: #9c661a;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2n2 {
+  background-color: #9c661a;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2n3 {
+  color: #865816;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2n3 {
+  background-color: #865816;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2n4 {
+  color: #704a13;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2n4 {
+  background-color: #704a13;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2n5 {
+  color: #5a3b0f;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2n5 {
+  background-color: #5a3b0f;
+}
+
+/* line 44, ../sass/_color_mixins.scss */
+.c2n6 {
+  color: #442d0b;
+}
+
+/* line 47, ../sass/_color_mixins.scss */
+.bg-c2n6 {
+  background-color: #442d0b;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh1 {
+  -webkit-box-shadow: 0px 0px 6px 0px #e7f0ee;
+  -moz-box-shadow: 0px 0px 6px 0px #e7f0ee;
+  box-shadow: 0px 0px 6px 0px #e7f0ee;
+  -o-box-shadow: 0px 0px 6px 0px #e7f0ee;
+  -ms-box-shadow: 0px 0px 6px 0px #e7f0ee;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh2 {
+  -webkit-box-shadow: 0px 0px 6px 0px black;
+  -moz-box-shadow: 0px 0px 6px 0px black;
+  box-shadow: 0px 0px 6px 0px black;
+  -o-box-shadow: 0px 0px 6px 0px black;
+  -ms-box-shadow: 0px 0px 6px 0px black;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh3 {
+  -webkit-box-shadow: inset 2px 2px 30px 0px #b8d3cd;
+  -moz-box-shadow: inset 2px 2px 30px 0px #b8d3cd;
+  box-shadow: inset 2px 2px 30px 0px #b8d3cd;
+  -o-box-shadow: inset 2px 2px 30px 0px #b8d3cd;
+  -ms-box-shadow: inset 2px 2px 30px 0px #b8d3cd;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh4 {
+  -webkit-box-shadow: 0px 0px 1px 0px #89b5ab;
+  -moz-box-shadow: 0px 0px 1px 0px #89b5ab;
+  box-shadow: 0px 0px 1px 0px #89b5ab;
+  -o-box-shadow: 0px 0px 1px 0px #89b5ab;
+  -ms-box-shadow: 0px 0px 1px 0px #89b5ab;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh5 {
+  -webkit-box-shadow: 0px 0px 3px 1px gray;
+  -moz-box-shadow: 0px 0px 3px 1px gray;
+  box-shadow: 0px 0px 3px 1px gray;
+  -o-box-shadow: 0px 0px 3px 1px gray;
+  -ms-box-shadow: 0px 0px 3px 1px gray;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh6 {
+  -webkit-box-shadow: inset 2px 2px 30px 0px #c8dcd8;
+  -moz-box-shadow: inset 2px 2px 30px 0px #c8dcd8;
+  box-shadow: inset 2px 2px 30px 0px #c8dcd8;
+  -o-box-shadow: inset 2px 2px 30px 0px #c8dcd8;
+  -ms-box-shadow: inset 2px 2px 30px 0px #c8dcd8;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh7 {
+  -webkit-box-shadow: inset 1px 1px 3px #5a5a5a;
+  -moz-box-shadow: inset 1px 1px 3px #5a5a5a;
+  box-shadow: inset 1px 1px 3px #5a5a5a;
+  -o-box-shadow: inset 1px 1px 3px #5a5a5a;
+  -ms-box-shadow: inset 1px 1px 3px #5a5a5a;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh8 {
+  -webkit-box-shadow: 1px 1px 3px 0px #666666;
+  -moz-box-shadow: 1px 1px 3px 0px #666666;
+  box-shadow: 1px 1px 3px 0px #666666;
+  -o-box-shadow: 1px 1px 3px 0px #666666;
+  -ms-box-shadow: 1px 1px 3px 0px #666666;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh9 {
+  -webkit-box-shadow: -1px -1px 3px 0px #666666;
+  -moz-box-shadow: -1px -1px 3px 0px #666666;
+  box-shadow: -1px -1px 3px 0px #666666;
+  -o-box-shadow: -1px -1px 3px 0px #666666;
+  -ms-box-shadow: -1px -1px 3px 0px #666666;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh10 {
+  -webkit-box-shadow: 1px 1px 3px 0px black;
+  -moz-box-shadow: 1px 1px 3px 0px black;
+  box-shadow: 1px 1px 3px 0px black;
+  -o-box-shadow: 1px 1px 3px 0px black;
+  -ms-box-shadow: 1px 1px 3px 0px black;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh11 {
+  -webkit-box-shadow: inset 2px 2px 30px 0px #5a5a5a;
+  -moz-box-shadow: inset 2px 2px 30px 0px #5a5a5a;
+  box-shadow: inset 2px 2px 30px 0px #5a5a5a;
+  -o-box-shadow: inset 2px 2px 30px 0px #5a5a5a;
+  -ms-box-shadow: inset 2px 2px 30px 0px #5a5a5a;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh12 {
+  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh13 {
+  -webkit-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh14 {
+  -webkit-box-shadow: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+  -ms-box-shadow: inset 0px 0px 6.5px 1px rgba(0, 0, 0, 0.6);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh15 {
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.24);
+  -ms-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.24);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh16 {
+  -webkit-box-shadow: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.2);
+  -moz-box-shadow: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.2);
+  box-shadow: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.2);
+  -o-box-shadow: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.2);
+  -ms-box-shadow: inset 0px 0px 35px 0px rgba(125, 161, 179, 0.2);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh17 {
+  -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+  -ms-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.24);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh18 {
+  -webkit-box-shadow: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+  -o-box-shadow: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+  -ms-box-shadow: 2px 5px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh19 {
+  -webkit-box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+  -o-box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+  -ms-box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.35);
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh20 {
+  -webkit-box-shadow: -1px -1px 2px #004977;
+  -moz-box-shadow: -1px -1px 2px #004977;
+  box-shadow: -1px -1px 2px #004977;
+  -o-box-shadow: -1px -1px 2px #004977;
+  -ms-box-shadow: -1px -1px 2px #004977;
+}
+
+/* line 142, ../sass/_mixins2.scss */
+.Sh21 {
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.24);
+  -ms-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.24);
+}

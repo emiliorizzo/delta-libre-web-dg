@@ -1,17 +1,97 @@
+@charset "CP850";
+/*Creo 2 clases por cada color 
+ * mas que nada para testearlos */
+/*@color = color principal
+ @cant = cantidad de pasos
+ @pos = posici¢n en la escala
+ @Smax = % desaturaci¢n m xima, si es 0 no hace nada
+ @Bmax = % aumento o disminuci¢n m xima del brillo si es 0 la calcula solo a partir del color 
+  */
+/******COLORSETS FUNCTIONS *****/
+/* ESTO ES RIDICULO
+ * Listas para el pelotudo de sass que no interpola variables (less si) 
+ * Si ya se que puedo hacer solo las listas, pero por retrocompatibilidad no puedo.
+ * PARA QUE colors_mixins pueda crear las classes para cada color para verlos en test.hmtl
+ * */
+/*Creo 2 clases por cada color 
+ * mas que nada para testearlos */
+/*@color = color principal
+ @cant = cantidad de pasos
+ @pos = posici¢n en la escala
+ @Smax = % desaturaci¢n m xima, si es 0 no hace nada
+ @Bmax = % aumento o disminuci¢n m xima del brillo si es 0 la calcula solo a partir del color 
+  */
+/******COLORSETS FUNCTIONS *****/
+/* ESTO ES RIDICULO
+ * Listas para el pelotudo de sass que no interpola variables (less si) 
+ * Si ya se que puedo hacer solo las listas, pero por retrocompatibilidad no puedo.
+ * PARA QUE colors_mixins pueda crear las classes para cada color para verlos en test.hmtl
+ * */
+/*@mixin filter($f,$value){
+-webkit-filter: $f~"(${value})";
+-moz-filter: $f~"(${value})";
+-o-filter: $f~"(${value})";
+-ms-filter: $f~"(${value})";
+}*/
+/*Lista  para test*/
+/* Preseteos de Vinetas */
+/*CSS3 transition-- 
+$prop: propiedad | all 
+
+$tdur:50ms
+
+$timfunc:
+linear
+ease-in
+ease-out
+ease-in-out
+step-start
+step-end
+
+$tdelay: 1s | 1000 ms
+* 
+* */
+/*.center-porcentaje($cant,$ancho){
+   width:$ancho+"%";
+  $margin=2;
+  HACER LA CUENTA
+
+}*/
+/* Selectores H con el mismo color*/
+/* @mixin hColor ($index) when ($index > 0) {
+    h${index} {
+        color: $headColor;
+    }
+    @include hColor($index - 1);
+}*/
+/*Vignette para imagenes
+ @vig: preseteo de vi¤eta
+ * */
+/*
+ * @name: class name
+ * @Cs: color set list
+ * @$h : altura
+ * */
+/* line 4, ../sass/colortest.scss */
 #colortest {
   width: auto;
 }
+
+/* line 7, ../sass/colortest.scss */
 .ct {
   width: auto;
 }
+
+/* line 10, ../sass/colortest.scss */
 .fila {
   display: block;
   float: left;
-  width: 30%;
-  margin: 10%;
+  width: 10%;
+  margin: 0 5% 5% 5%;
 }
-.col,
-.som {
+
+/* line 16, ../sass/colortest.scss */
+.col, .som, .cs {
   height: 50px;
   line-height: 50px;
   text-align: center;
@@ -23,8 +103,20 @@
   border-radius: 10px;
   margin: 10px 0 0 0;
   font-weight: bold;
-  color: white;
 }
+
+/* line 25, ../sass/colortest.scss */
+.cs * {
+  cursor: hand;
+}
+
+/* line 29, ../sass/colortest.scss */
+.som {
+  margin-top: 20px;
+  color: black;
+}
+
+/* line 34, ../sass/colortest.scss */
 .col {
   -webkit-box-shadow: 1px 1px 3px 0px #666666;
   -moz-box-shadow: 1px 1px 3px 0px #666666;
@@ -32,20 +124,35 @@
   -o-box-shadow: 1px 1px 3px 0px #666666;
   -ms-box-shadow: 1px 1px 3px 0px #666666;
   text-shadow: 0px 1px 2px black;
+  color: white;
 }
+
+/* line 39, ../sass/colortest.scss */
 .col span {
   opacity: 0.6;
-  filter: alpha(opacity=60);
+  filter: "alpha(opacity=${opacity})";
 }
+
+/* line 43, ../sass/colortest.scss */
 .color div {
   height: 100px;
   line-height: 100px;
 }
-.som {
-  margin-top: 20px;
-  color: black;
-  display: inline;
-  float: left;
-  width: 100px;
-  margin: 30px;
+
+/* line 48, ../sass/colortest.scss */
+#page, #main {
+  height: auto;
+}
+
+/* line 51, ../sass/colortest.scss */
+#colorcont, #sombrascont {
+  margin: 0;
+  padding: 0;
+  min-height: 575px;
+  overflow: auto;
+}
+
+/* line 57, ../sass/colortest.scss */
+#colortest, #sombrastest {
+  vertical-align: middle;
 }
